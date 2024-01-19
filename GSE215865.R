@@ -10,14 +10,14 @@
 # Note that the metadata for this dataset could not be downloaded programmatically.
 # The procedure for downloading the metadata is outlined below.
 
-# load all required packages ----------------------------------------------
+# Load all required packages ----------------------------------------------
 
 library(readxl)
 library(tidyverse)
 library(gprofiler2)
 library(plotly)
 
-# source all additional functions from Kevin's github repository ----------------------------------------------
+# Source all additional functions from Kevin's github repository ----------------------------------------------
 
 source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/import_data.r")
 source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/import_metadata.r")
@@ -31,7 +31,7 @@ source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/hea
 
 # Create a directory for working (if it doesn't already exist) and move to it --------
 # Specify the directory path
-dir_path <- "~/Downloads/GSE215865/"
+dir_path <- "~/Downloads/TEST/GSE215865/"
 # Check if the directory exists
 if (dir.exists(dir_path)) {
   stop("Error: The directory already exists.")
@@ -40,7 +40,7 @@ if (dir.exists(dir_path)) {
   dir.create(dir_path)
   print("Directory created successfully.")
 }
-# move to that directory 
+# Move to that directory 
 setwd(dir_path)
 
 # Download data and metadata ----------------------------------------------
@@ -52,7 +52,7 @@ data_url <- "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE215nnn/GSE215865/suppl/G
 local_file_path_data <- "GSE215865_rnaseq_raw_count_matrix.csv.gz"
 # Download the file
 download.file(data_url, destfile = local_file_path_data, mode = "wb")
-# now we have to unzip the gz file, easiest to just do this with a system call
+# Now we have to unzip the gz file, easiest to just do this with a system call
 system( paste("gunzip", local_file_path_data) )
 
 # Now the metadata ...
@@ -64,22 +64,22 @@ system( paste("gunzip", local_file_path_data) )
 
 # Import and explore the data and the metadata -----------------------------------------
 
-# import raw data and metadata
+# Import raw data and metadata
 GSE215865_metadata <- read_csv("SraRunTable.txt")
 GSE215865_data <- read_csv("GSE215865_rnaseq_raw_count_matrix.csv")
 
-# see how many samples there are at the start
+# See how many samples there are at the start
 ncol(GSE215865_data) - 1 # 1392, first column has "Ensembl_Gene_ID" 
 
-# look at sample ids in the data and metadata
+# Look at sample ids in the data
 colnames(GSE215865_data)[1:3] #  They look like this in the data: "Subj_16ae238fT0_Plate_2"
 length(colnames(GSE215865_data)) # a column for the Ensembl Gene IDs followed by 1392 samples
 
-# reconstruct sample ID in metadata that matches those found in colnames of the data
+# Reconstruct sample ID in metadata that matches those found in colnames of the data
 GSE215865_metadata$blood_sample_id[1] # "Subj_5d362febT1"
 GSE215865_metadata$library_prep_plate[1] # "Plate_8"
 paste( GSE215865_metadata$blood_sample_id[1], GSE215865_metadata$library_prep_plate[1], sep="_" ) # "Subj_5d362febT1_Plate_8"
-# check to make sure this reconstructed sample name is actually in the data
+# Check to make sure this reconstructed sample name is actually in the data
 "Subj_5d362febT1_Plate_8" %in% colnames(GSE215865_data) # TRUE
 # Now add a column with the reconstructed sample ID to the metadata
 length(colnames(GSE215865_metadata))
@@ -95,7 +95,7 @@ common_samples <- sort(common_samples)
 length(common_samples) # 1391
 common_samples[1:3] # take a look at the first three sample IDs
 
-# subselect data and metadata for the 1391 samples for which there are data and metadata
+# Subselect data and metadata for the 1391 samples for which there are data and metadata
 # and then sort/order
 # First the metadata 
 GSE215865_selected_metadata <- GSE215865_metadata |>
@@ -108,12 +108,12 @@ GSE215865_selected_metadata <- column_to_rownames(GSE215865_selected_metadata, v
 rownames(GSE215865_selected_metadata) # double check to make sure that the rownames are there
 
 # Now the data
-# subselect with indices
+# Subselect with indices
 GSE215865_selected_data <- GSE215865_data[,c("Ensembl_Gene_ID",common_samples)]
-dim(GSE215865_selected_data)
+dim(GSE215865_selected_data) # 58929  1392
 # Create rownames from the "Ensembl_Gene_ID" column
 GSE215865_selected_data <- column_to_rownames(GSE215865_selected_data, var="Ensembl_Gene_ID")
-dim(GSE215865_selected_data)
+dim(GSE215865_selected_data) # 58929  1391
 
 # SAVE THE DATA AND THE METADATA TO FILE (First attempt) ----------------------------------
 # Now save the metadata to file
@@ -123,22 +123,22 @@ write.table(file = "GSE215865.data.txt", x = GSE215865_selected_data, sep="\t", 
 
 # Check that subselecting "worked" ----------------------------------------
 
-# import data and metadata from files
+# Import data and metadata from files
 GSE215865_data <- import_data("GSE215865.data.txt")
 GSE215865_metadata <- import_metadata("GSE215865.metadata.txt")
-# check that samples are in common
+# Check that samples are in common
 length( intersect( colnames(GSE215865_data), rownames(GSE215865_metadata) ) ) # 1391 samples are in common
-# check that samples are identically ordered
+# Check that samples are identically ordered
 identical( colnames(GSE215865_data), rownames(GSE215865_metadata) ) #FALSE - but ordering did not work, try again
 
-# try to reorder
-# create an ordered index of the samples
+# Try to reorder
+# Create an ordered index of the samples
 ordered_sample_names <- sort( colnames(GSE215865_data) )
-# order the data columns by this index
+# Order the data columns by this index
 GSE215865_data <- GSE215865_data[,ordered_sample_names]
-# order the metadata rows by this index
+# Order the metadata rows by this index
 GSE215865_metadata <- GSE215865_metadata[ordered_sample_names,]
-# check for identity once again
+# Check for identity once again
 identical( colnames(GSE215865_data), rownames(GSE215865_metadata) ) # TRUE
 
 # SAVE THE DATA AND THE METADATA TO FILE (Second attempt) ----------------------------------
@@ -156,24 +156,24 @@ write.table(file = "GSE215865.metadata.txt", x = GSE215865_metadata, sep="\t",  
 # The analysis really starts at the this point, everything up until now has been
 # data wrangling to make the analyses below possible
 
-# import the data and metadata  -------------------------------------------
+# Import the data and metadata  -------------------------------------------
 GSE215865_data <- import_data("GSE215865.data.txt")
 GSE215865_metadata <- import_metadata("GSE215865.metadata.txt")
 
-# look at distribution of raw data ----------------------------------------
+# Look at distribution of raw data ----------------------------------------
 
-# explore distribution of data
+# Explore distribution of data
 all_GSE215865_data <- as.vector(GSE215865_data)
 hist(all_GSE215865_data, breaks =100)
-hist(log10(all_GSE215865_data), breaks =100) # not really log normal
+hist(log10(all_GSE215865_data), breaks =100) # not really, but almost log normal
 # with ggplot
 all_GSE215865_data <- data.frame(Values = as.vector(GSE215865_data))
 ggplot(data=all_GSE215865_data,
        mapping=aes(x=Values))+
-  geom_histogram()
+       geom_histogram()
 
 
-# look at the distribution of summary values in the raw data
+# Look at the distribution of summary values in the raw data
 GSE215865_raw_mean <- apply(GSE215865_data, 2, mean) 
 GSE215865_raw_median <- apply(GSE215865_data, 2, median) 
 GSE215865_raw_min <- apply(GSE215865_data, 2, min) 
@@ -186,7 +186,7 @@ plot(GSE215865_raw_min, pch=20) # no surprises
 plot(GSE215865_raw_max, pch=20) # one extreme outlier, above 2.5e+07
 plot(GSE215865_raw_sd, pch=20) # one extreme outlier, above 120,000
 
-# make these data tidy for ggplot
+# Make these data tidy for ggplot
 GSE215865_raw_descriptive_stats <- as.matrix(names(GSE215865_raw_mean))
 GSE215865_raw_descriptive_stats <- cbind(GSE215865_raw_descriptive_stats, as.matrix(GSE215865_raw_mean))
 GSE215865_raw_descriptive_stats <- cbind(GSE215865_raw_descriptive_stats, as.matrix(GSE215865_raw_median))
@@ -214,19 +214,18 @@ ggplot(
   scale_color_manual(name = "Stat Values", values = c("GSE215865_mean" = "black", "GSE215865_median" = "red", "GSE215865_min"="blue", "GSE215865_max"="green", "GSE215865_sd"="purple"))
 # The outliers don't look so bad in log space, for now will keep all samples
 
-
 # Preprocess and look at distribution of normed data -----------------------------------------------------
 
 # Preprocess the data -- attempt to normalize it
 preprocessing_tool("GSE215865.data.txt", pseudo_count=0.1)
 
-# look at distribution of normed data
+# Look at distribution of normed data
 GSE215865_data_n <- import_data("GSE215865.data.txt.quantile.PREPROCESSED.txt")
 all_GSE215865_data_n <- as.vector(GSE215865_data_n)
 hist(all_GSE215865_data_n, breaks =100)
-hist(log10(all_GSE215865_data_n), breaks =100) # data have a peculiar distribution, definitely non-normal
+hist(log10(all_GSE215865_data_n), breaks =100) # data have a peculiar bimodal distribution, definitely non-normal
 
-# look at the distribution of summary values in the normed data
+# Look at the distribution of summary values in the normed data
 GSE215865_norm_mean <- apply(GSE215865_data_n, 2, mean)
 GSE215865_norm_median <- apply(GSE215865_data_n, 2, median) 
 GSE215865_norm_min <- apply(GSE215865_data_n, 2, min) 
@@ -239,14 +238,15 @@ plot(GSE215865_norm_min) # tiered structure is still apparent
 plot(GSE215865_norm_max) # a group of somewhat aberrant points around 0.98, two extreme at around 0.1
 plot(GSE215865_norm_sd) # anything below 0.15 seems to be fairly anomalous
 # Not sure what to make of the tiered nature of the data; not understanding it I'm 
-# hesitatnt to toss any of the samples. We may be able to see how they correlate with
-# the metadata in the PCoAs below. My guess is non-biological structure (bias, batach effects)
+# hesitant to toss any of the samples. We may be able to see how they correlate with
+# the metadata in the PCoAs below. My guess is non-biological structure (bias, batch effects)
 # that can be identified and removed later
 
 # PCoA --------------------------------------------------------------------
 
 # calculate PCoA on the preprocessed data
 calculate_pco(file_in="GSE215865.data.txt.quantile.PREPROCESSED.txt")
+# This takes a few minutes
 
 # Iterate through the metadata creating a static 3d PCoA for each metadata column
 plot_static_colored_3d_pcoas(
@@ -259,10 +259,11 @@ system("open *.PCoA.*.png")
 # Some of the outlier samples give the PCoA an unusual appearance.
 # Some correlation between the distribution of the points and "covid-19_positive"
 # Also some correlation to "patient_classification_at_first_sample"
-# and "sampling_time_point_label"
+# and "sampling_time_point_label". These look like biological signals.
+# There is also some correlation with respect to "library_prep_plate"; this 
+# appears to be a batch effect.
 
 # Render an interactive 3d PCoA plot from the PCoA and the corresponding metadata
-source("~/Documents/GitHub/workflow_play/render_calculated_pcoa.r")
 plot_interactive_colored_3d_pcoa(
   pcoa_data_file = "GSE215865.data.txt.quantile.PREPROCESSED.txt.euclidean.PCoA",
   selected_eigen_vectors = c(1,2,3),
@@ -279,31 +280,31 @@ GSE215865_pcoa <- load_pcoa_data("GSE215865.data.txt.quantile.PREPROCESSED.txt.e
 boxplot( GSE215865_pcoa$eigen_vectors[,1:3] )
 
 hist( GSE215865_pcoa$eigen_vectors[,1:3] )
-# looks like values less than -10 are the outliers, so will remove them and look again
+# Looks like values less than -10 are the outliers, so will remove them and look again
 
-# create a data.frame that contains the vectors
+# Create a data.frame that contains the vectors
 GSE215865_vectors <- as.data.frame(GSE215865_pcoa$eigen_vectors)
-# move the rownames to a column names "GSE215865_rownames" to keep the data tidy
+# Move the rownames to a column names "GSE215865_rownames" to keep the data tidy
 GSE215865_vectors <- rownames_to_column(GSE215865_vectors,var="GSE215865_rownames")
-# remove the quotes from "GSE215865_rownames" values
+# Remove the quotes from "GSE215865_rownames" values
 GSE215865_vectors$GSE215865_rownames <- str_replace_all(GSE215865_vectors$GSE215865_rownames, '"', '')
 dim(GSE215865_vectors) # 1391 1392
-# look at the first few
+# Look at the first few
 GSE215865_vectors[1:3,1:3]
 # Remove rows with values less than -10 in the first three vectors
 GSE215865_vectors_filtered <- GSE215865_vectors |>
   filter(`"PCO1"` > -10) |>
   filter(`"PCO2"` > -10) |>
   filter(`"PCO3"` > -10)
-dim(GSE215865_vectors_filtered) # 1351 1392, 40 rows/samples were removed
-# look at the distribution of the remaining values, first with boxplots
+dim(GSE215865_vectors_filtered) # 1358 1392, 33 rows/samples were removed
+# Look at the distribution of the remaining values, first with boxplots
 boxplot( GSE215865_vectors_filtered[,2:4] ) # still a large number of outliers
-# take a look at the dsitribution of values in the individual vectors
+# Take a look at the distribution of values in the individual vectors
 hist( as.numeric(GSE215865_vectors_filtered[,2]) ) # less than -2 appear to be outliers
 hist( as.numeric(GSE215865_vectors_filtered[,3]) ) # less than -5 outliers interesting that this vector exhibits a normal distribution when the others do not
 hist( as.numeric(GSE215865_vectors_filtered[,4]) ) # less than -4 outlier
 
-# create an interactive plot of the filtered vector values
+# Create an interactive plot of the filtered vector values
 plot_ly(
   x = GSE215865_vectors_filtered[,2], 
   y = GSE215865_vectors_filtered[,3], 
@@ -314,15 +315,15 @@ plot_ly(
 
 # Get rid of quotes in the rownames
 GSE215865_vectors_filtered$GSE215865_rownames <- str_replace_all(GSE215865_vectors_filtered$GSE215865_rownames, '"', '')
-# see how many samples were culled
+# See how many samples were culled
 length(intersect( GSE215865_vectors_filtered$GSE215865_rownames, GSE215865_vectors$GSE215865_rownames ))
 length(setdiff( GSE215865_vectors$GSE215865_rownames, GSE215865_vectors_filtered$GSE215865_rownames ))
-# lost just 40 samples
+# Lost just 40 samples
 
 # The data may have some horseshoe artifact, try another PCoA with Bray-Curtis distance 
-# call function without args to see available distance options
+# Call function without args to see available distance options
 calculate_pco()
-# run again using "bray-curtis" as the "dist_method"
+# Run again using "bray-curtis" as the "dist_method"
 calculate_pco(file_in="GSE215865.data.txt.quantile.PREPROCESSED.txt", dist_method = "bray-curtis")
 
 # Render an interactive 3d PCoA plot from the PCoA calculated with Bray-Curtis distance
@@ -345,7 +346,7 @@ plot_interactive_colored_3d_pcoa(
 # For now, use all of the data, but clearly some of the samples should be culled to make
 # results more interpretable 
 
-# perform a stat test on the data -----------------------------------------
+# Perform a stat test on the data -----------------------------------------
 
 # We want to identify the genes that exhibit the most significant difference between
 # "Negative" and "Positive" samples listed under the "covid-19_positive" metadata.
@@ -360,7 +361,7 @@ sigtest(data_file="GSE215865.data.txt.quantile.PREPROCESSED.txt",
         p_adjust_method = "BH"
 )
 
-# Load the stat test results and subselect data based on the stat results
+# Load the stat test results and subselect data based on them
 GSE215865_stat_results <- import_data("GSE215865.data.txt.quantile.PREPROCESSED.Mann-Whitney-unpaired-Wilcoxon.covid-19_positive.STAT_RESULTS.txt")
 # make the results "tidy" for ggplot
 GSE215865_stat_results <- as_tibble(GSE215865_stat_results,rownames=NA)
@@ -373,14 +374,16 @@ ggplot(
   geom_line(aes(y=bonferroni_p, colour="bonferroni_p")) +
   geom_line(aes(y=BH_p, colour="BH_p")) +
   scale_color_manual(name = "Stat Values", values = c("p" = "black", "bonferroni_p" = "red", "BH_p"="blue"))
+# A lot less data passes Bonferroni (0.05) in this dataset
 
 # Filter the data to retain just the 5% ~most significant   
-dim(GSE215865_stat_results)
+dim(GSE215865_stat_results) # 58177  1398
 GSE215865_stat_results_subselected <- GSE215865_stat_results |> 
   rownames_to_column("GSE215865_rowname") |> # do this to retain the rownanes somewhere in the matrix
   filter( bonferroni_p < 0.1 ) # Bonferroni may be a little too strict for this dataset
-dim(GSE215865_stat_results_subselected)
+dim(GSE215865_stat_results_subselected) # 2011 1399
 dim(GSE215865_stat_results_subselected)[1]/dim(GSE215865_stat_results)[1]*100 # find a value that retains ~5% most significant
+# Not quite 5% of the genes, but I don't want to be any less stringent with Bonferroni
 # put the rownames back where they belong
 GSE215865_stat_results_subselected <- column_to_rownames(GSE215865_stat_results_subselected, var="GSE215865_rowname")
 
@@ -399,7 +402,6 @@ export_data(data_object = GSE215865_stat_results_subselected_and_cleaned, file_n
 # removed all of the potentially offending characters and it worked
 # from https://github.com/Teichlab/cellphonedb/issues/219
 # "I replaced the symbols(/-_ et al) with dot(.) in cell/cluster names, and then the heatmap plot function works again. May it can help you."
-
 GSE215865_metadata <- import_metadata("GSE215865.metadata.txt")
 # We replace the existing column names with syntactically correct ones like this
 colnames(GSE215865_metadata) <- make.names(colnames(GSE215865_metadata))
@@ -425,6 +427,18 @@ heatmap_dendrogram(file_in = "GSE215865_stat_results_subselected_and_cleaned.txt
 )
 # This worked fine on my local machine
 system("open GSE215865_stat_results_subselected_and_cleaned.txt.HD.png")
+
+# Calculate a PCoA for the statistically subselected data
+calculate_pco("GSE215865_stat_results_subselected_and_cleaned.txt")
+
+# Plot the new PCoA
+plot_interactive_colored_3d_pcoa(
+  pcoa_data_file = "GSE215865_stat_results_subselected_and_cleaned.txt.euclidean.PCoA",
+  selected_eigen_vectors = c(1,2,3),
+  pcoa_metadata_file = "GSE215865.metadata.txt",
+  metadata_column = "covid.19_positive" 
+)
+# Now the Covid status related separation is much more apparent
 
 # ANNOTATE RESULTS --------------------------------------------------------
 
