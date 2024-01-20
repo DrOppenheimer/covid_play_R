@@ -61,7 +61,6 @@ metadata_url <- "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE198nnn/GSE198449/suppl
 local_file_path_metadata <- "GSE198449_PCR_and_Symptoms_Full_Info.xlsx"
 download.file(metadata_url, destfile = local_file_path_metadata, mode = "wb")
 
-
 # Import and explore the metadata -----------------------------------------
 
 # Import metadata
@@ -283,9 +282,9 @@ identical_sample_names <- identical(
   colnames(GSE198449_data),
   rownames(GSE198449_metadata)
 )
-identical_sample_names # FALSE, They are ordered differently
+identical_sample_names # TRUE, They are ordered the same, but may not have been
 
-# So order/sort them
+# So order/sort them to be sure
 GSE198449_ordered_sample_names <- sort(colnames(GSE198449_data))
 
 # Make sure that data are the correct sizes -- 
@@ -308,11 +307,10 @@ identical_sample_names <- identical(
 )
 identical_sample_names # TRUE, Now it seems ok
 
-
 # SAVE THE DATA AND THE METADATA TO FILE ----------------------------------
 
-write.table(file = "GSE198449.data.txt", x = GSE198449_data, sep="\t", quote=FALSE, col.names=NA) 
-write.table(file = "GSE198449.metadata.txt", x = GSE198449_metadata, sep="\t", quote=FALSE, col.names=NA)  
+export_data(data_object = GSE198449_data, file_name = "GSE198449.data.txt" )
+export_data(data_object = GSE198449_metadata, file_name ="GSE198449.metadata.txt"  )
 
 # re-open data and meta data and make sure that each is sorted by the id
 ##source("~/Documents/GitHub/workflow_play/import_metadata.r")
@@ -437,8 +435,8 @@ GSE198449_data <- GSE198449_data[, !colnames(GSE198449_data) %in% "X20_5217.T00_
 GSE198449_metadata <- GSE198449_metadata[!rownames(GSE198449_metadata) %in% "X20_5217.T00_P5",]
 
 # save the "edited" data
-write.table(file = "GSE198449.data.edit.txt", x = GSE198449_data, sep="\t", quote=FALSE, col.names=NA) 
-write.table(file = "GSE198449.metadata.edit.txt", x = GSE198449_metadata, sep="\t", quote=FALSE, col.names=NA)  
+export_data(data_object = GSE198449_data, file_name = "GSE198449.data.edit.txt")
+export_data(data_object = GSE198449_metadata, file_name = "GSE198449.metadata.edit.txt")
 
 # Preprocess and look at distribution of normed data -------------------------------------
 
@@ -450,7 +448,7 @@ preprocessing_tool("GSE198449.data.edit.txt", pseudo_count=0.1)
 GSE198449_data_n <- import_data("GSE198449.data.edit.txt.quantile.PREPROCESSED.txt")
 all_GSE198449_data_n <- as.vector(GSE198449_data_n)
 hist(all_GSE198449_data_n, breaks =100)
-hist(log10(all_GSE198449_data_n), breaks =100). # Data are approximately, but not quite, normal
+hist(log10(all_GSE198449_data_n), breaks =100) # Data are approximately, but not quite, normal
 # The non-normality of the data will affect our selection of a statistical test below.
 
 # Look at the distribution of summary values in the normed data
@@ -463,7 +461,7 @@ GSE198449_norm_sd <- apply(GSE198449_data_n, 2, sd)
 plot(GSE198449_norm_mean) # several outliers, roughly any below 0.232
 plot(GSE198449_norm_median) # several apparent outliers, those below 0.15
 plot(GSE198449_norm_min) # no apparent outliers
-plot(GSE198449_norm_max) # no apprent outliers
+plot(GSE198449_norm_max) # no apparent outliers
 plot(GSE198449_norm_sd) # a few outliers, those above 0.256
 
 # First blush, identified additional outlier samples but did not 
@@ -502,7 +500,7 @@ system("open *.PCoA.*.png")
 # as a biological signal. "biocollection.ID", "enrollment.batch", "participant.ID", and
 # "sympton" all look pretty random; I think this is as we would expect.
 # For now, we're just interested in "PCR.test.for.SARS.Cov.2". It contains the Covid state
-# related information that we are interested in. We examine it futher below.
+# related information that we are interested in. We examine it further below.
 
 # perform a stat test on the data -----------------------------------------
 
@@ -619,8 +617,7 @@ for ( i in 1:length(GSE198449_genes)){
   GSE198449_stat_results_subselected[i,"gene_names"] <- GSE198449_gene_annotation[1,"Gene name"]
   GSE198449_stat_results_subselected[i,"gene_descriptions"] <- GSE198449_gene_annotation[1,"Gene description"]
 }
-write.table(file = "GSE198449.annotations.txt", x = GSE198449_stat_results_subselected, sep="\t", quote=FALSE, col.names=NA) 
-
+export_data(data_object = GSE198449_stat_results_subselected, file_name = "GSE198449.annotations.txt")
 
 # PRELIMINARY PATHWAY ANALYSIS --------------------------------------------
 

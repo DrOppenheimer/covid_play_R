@@ -94,7 +94,7 @@ na_rows <- which(is.na(my_results[, "Gene stable ID"]))
 # Remove identified "NA" rows
 my_results <- my_results[-na_rows, ]
 # Check to make sure that we still have 61 genes
-dim(my_results) # 60 -- one wasn't annotated. Figure out which one it was.
+dim(my_results) # 60 3 -- one wasn't annotated. Figure out which one it was.
 setdiff( all_three, my_results[,"Gene stable ID"] ) # ENSG00000234290, not clear why it was not annotated
 # This test indicate that there is no annotation for this ID in annotations we downloaded from Ensembl
 annotations[annotations$`Gene stable ID` == "ENSG00000234290",] # <0 rows> (or 0-length row.names)
@@ -107,7 +107,7 @@ my_results <- rbind(my_results, c("ENSG00000234290", NA, NA))
 # Write the mostly annotated list of genes to file
 write.table(file = "In_common.txt", x = my_results, sep="\t",  quote=FALSE, col.names=TRUE, row.names=FALSE)
 
-# Heatmap Dendrograms of the selected genes across all three datas --------
+# Heatmap-Dendrograms of the selected genes across all three datas --------
 
 # The data from each of the datasets is subselected to just the genes found in common
 # Those data are saved and used to create heatmap-dendrograms
@@ -170,6 +170,6 @@ system("open GSE212041_stat_all_three.txt.HD.png")
 # Use the list of gene ids from above
 all_three
 
-# Use the gprofiler2 pacakge to perform preliminary pathway analysis
+# Use the gprofiler2 package to perform preliminary pathway analysis
 gostres <- gost(query = all_three, organism = 'hsapiens', significant = TRUE)
 gostplot(gostres, capped = FALSE, interactive = TRUE)

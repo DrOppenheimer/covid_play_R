@@ -73,7 +73,7 @@ ncol(GSE215865_data) - 1 # 1392, first column has "Ensembl_Gene_ID"
 
 # Look at sample ids in the data
 colnames(GSE215865_data)[1:3] #  They look like this in the data: "Subj_16ae238fT0_Plate_2"
-length(colnames(GSE215865_data)) # a column for the Ensembl Gene IDs followed by 1392 samples
+length(colnames(GSE215865_data)) # 1393, a column for the Ensembl Gene IDs followed by 1392 samples
 
 # Reconstruct sample ID in metadata that matches those found in colnames of the data
 GSE215865_metadata$blood_sample_id[1] # "Subj_5d362febT1"
@@ -117,9 +117,9 @@ dim(GSE215865_selected_data) # 58929  1391
 
 # SAVE THE DATA AND THE METADATA TO FILE (First attempt) ----------------------------------
 # Now save the metadata to file
-write.table(file = "GSE215865.metadata.txt", x = GSE215865_selected_metadata, sep="\t",  quote=FALSE, col.names=NA)  
+export_data(data_object = GSE215865_selected_metadata, file_name = "GSE215865.metadata.txt")
 # Write the data to file
-write.table(file = "GSE215865.data.txt", x = GSE215865_selected_data, sep="\t", quote=FALSE, col.names=NA) 
+export_data(data_object = GSE215865_selected_data, file_name = "GSE215865.data.txt")
 
 # Check that subselecting "worked" ----------------------------------------
 
@@ -142,8 +142,8 @@ GSE215865_metadata <- GSE215865_metadata[ordered_sample_names,]
 identical( colnames(GSE215865_data), rownames(GSE215865_metadata) ) # TRUE
 
 # SAVE THE DATA AND THE METADATA TO FILE (Second attempt) ----------------------------------
-write.table(file = "GSE215865.data.txt", x = GSE215865_data, sep="\t", quote=FALSE, col.names=NA) 
-write.table(file = "GSE215865.metadata.txt", x = GSE215865_metadata, sep="\t",  quote=FALSE, col.names=NA)  
+export_data(data_object = GSE215865_data, file_name = "GSE215865.data.txt")
+export_data(data_object = GSE215865_metadata, file_name = "GSE215865.metadata.txt")
 
 # OPTIONAL Clean House ----------------------------------------------------
 
@@ -171,7 +171,6 @@ all_GSE215865_data <- data.frame(Values = as.vector(GSE215865_data))
 ggplot(data=all_GSE215865_data,
        mapping=aes(x=Values))+
        geom_histogram()
-
 
 # Look at the distribution of summary values in the raw data
 GSE215865_raw_mean <- apply(GSE215865_data, 2, mean) 
@@ -276,9 +275,9 @@ plot_interactive_colored_3d_pcoa(
 # try to find samples that have extreme PCoA coordinates
 GSE215865_pcoa <- load_pcoa_data("GSE215865.data.txt.quantile.PREPROCESSED.txt.euclidean.PCoA")
 
-# Take a look at the distribution of values in the first three vectors of the PCoA
+# Take a look at the distribution of values in the first three vectors of the PCoA with a boxplot
 boxplot( GSE215865_pcoa$eigen_vectors[,1:3] )
-
+# Now with a histogram
 hist( GSE215865_pcoa$eigen_vectors[,1:3] )
 # Looks like values less than -10 are the outliers, so will remove them and look again
 
@@ -318,7 +317,7 @@ GSE215865_vectors_filtered$GSE215865_rownames <- str_replace_all(GSE215865_vecto
 # See how many samples were culled
 length(intersect( GSE215865_vectors_filtered$GSE215865_rownames, GSE215865_vectors$GSE215865_rownames ))
 length(setdiff( GSE215865_vectors$GSE215865_rownames, GSE215865_vectors_filtered$GSE215865_rownames ))
-# Lost just 40 samples
+# Lost just 33 samples
 
 # The data may have some horseshoe artifact, try another PCoA with Bray-Curtis distance 
 # Call function without args to see available distance options
@@ -387,17 +386,17 @@ dim(GSE215865_stat_results_subselected)[1]/dim(GSE215865_stat_results)[1]*100 # 
 # put the rownames back where they belong
 GSE215865_stat_results_subselected <- column_to_rownames(GSE215865_stat_results_subselected, var="GSE215865_rowname")
 
-# export results with stats
+# Export results with stats
 export_data(data_object = GSE215865_stat_results_subselected, file_name = "GSE215865_stat_results_subselected.txt")
-# remove the columns that contain the stats(this is hacky)
+# Remove the columns that contain the stats(this is hacky)
 GSE215865_stat_results_subselected_and_cleaned <- remove_last_n_columns(GSE215865_stat_results_subselected, n=7)
-# export the data ready to create a HD
+# Export the data ready to create a HD
 export_data(data_object = GSE215865_stat_results_subselected_and_cleaned, file_name = "GSE215865_stat_results_subselected_and_cleaned.txt")
 
-# heatmap dendrograms -----------------------------------------------------
+# Heatmap-dendrograms -----------------------------------------------------
 
 # Here I originally ran into a bit of trouble.
-# Heatmap didn't work for a while -- seems like issue was unwanted characters
+# Heatmap-d didn't work for a while -- seems like issue was unwanted characters
 # in the column name that R did not directly complain about. Per note below
 # removed all of the potentially offending characters and it worked
 # from https://github.com/Teichlab/cellphonedb/issues/219
@@ -406,8 +405,7 @@ GSE215865_metadata <- import_metadata("GSE215865.metadata.txt")
 # We replace the existing column names with syntactically correct ones like this
 colnames(GSE215865_metadata) <- make.names(colnames(GSE215865_metadata))
 # Save the metadata back to file
-write.table(file = "GSE215865.metadata.txt", x = GSE215865_metadata, sep="\t",  quote=FALSE, col.names=NA)
-
+export_data(data_object = GSE215865_metadata, file_name = "GSE215865.metadata.txt")
 
 # First, look at all the data with HD
 #tic()
@@ -418,7 +416,6 @@ write.table(file = "GSE215865.metadata.txt", x = GSE215865_metadata, sep="\t",  
 #toc() # This may fail depending on your system memory. It failed for me,
 # so I've commented this code out.
 #system("open GSE215865_stat_results_subselected_and_cleaned.txt.HD.png")
-
 
 # Now look at just the statistically subselected genes
 heatmap_dendrogram(file_in = "GSE215865_stat_results_subselected_and_cleaned.txt",
@@ -479,7 +476,7 @@ for ( i in 1:length(GSE215865_genes)){
   GSE215865_stat_results_subselected[i,"gene_names"] <- GSE215865_gene_annotation[1,"Gene name"]
   GSE215865_stat_results_subselected[i,"gene_descriptions"] <- GSE215865_gene_annotation[1,"Gene description"]
 }
-write.table(file = "GSE215865.annotations.txt", x = GSE215865_stat_results_subselected, sep="\t", quote=FALSE, col.names=NA) 
+export_data(data_object = GSE215865_stat_results_subselected, file_name = "GSE215865.annotations.txt")
 
 # PRELIMINARY PATHWAY ANALYSIS --------------------------------------------
 

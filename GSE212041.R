@@ -158,9 +158,9 @@ identical(rownames(GSE212041_metadata), colnames(GSE212041_data)) # Now it is TR
 
 # SAVE THE DATA AND THE METADATA TO FILE ----------------------------------
 # First the data
-write.table(file = "GSE212041.data.txt", x = GSE212041_data, sep="\t",  quote=FALSE, col.names=NA)
+export_data(data_object = GSE212041_data, file_name = "GSE212041.data.txt")
 # Now the metadata
-write.table(file = "GSE212041.metadata.txt", x = GSE212041_metadata, sep="\t",  quote=FALSE, col.names=NA)
+export_data(data_object = GSE212041_metadata, file_name = "GSE212041.metadata.txt")
 
 # OPTIONAL Clean House ----------------------------------------------------
 
@@ -179,8 +179,8 @@ GSE212041_metadata <- import_metadata("GSE212041.metadata.txt")
 
 # Look at distribution of raw data ----------------------------------------
 
-# look at TPM data distribution
-# explore distribution of data
+# Look at TPM data distribution
+# Explore distribution of data
 all_GSE212041_data <- as.vector(GSE212041_data)
 hist(all_GSE212041_data, breaks =100)
 hist(log10(all_GSE212041_data), breaks =100) # The data appear to be roughly log normal
@@ -293,14 +293,6 @@ plot_interactive_colored_3d_pcoa(
 # see unique(GSE212041_metadata[,"patient_category"]) vs unique(GSE212041_metadata[,"covid_status"])
 # There is a fairly obvious horseshoe artifact in the data. We try to addess this below by 
 # using another distance metric.
-
-# First, render the "patient_category" colored PCoA as an interactive 3d plot
-plot_interactive_colored_3d_pcoa(
-  pcoa_data_file = "GSE212041.data.txt.quantile.PREPROCESSED.txt.euclidean.PCoA",
-  selected_eigen_vectors = c(1,2,3),
-  pcoa_metadata_file = "GSE212041.metadata.txt",
-  metadata_column = "patient_category" # "covid_status"
-)
 
 # See if the horseshoe can be improved by changing the distance metric to Bray-Curtis
 calculate_pco(file_in="GSE212041.data.txt.quantile.PREPROCESSED.txt", dist_method = "bray-curtis")
