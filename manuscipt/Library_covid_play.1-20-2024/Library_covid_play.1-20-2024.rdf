@@ -1,0 +1,2864 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:z="http://www.zotero.org/namespaces/export#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:bib="http://purl.org/net/biblio#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:link="http://purl.org/rss/1.0/modules/link/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/">
+    <bib:Article rdf:about="#item_2">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1664-3224"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Soares-Schanoski</foaf:surname>
+                        <foaf:givenName>Alessandra</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sauerwald</foaf:surname>
+                        <foaf:givenName>Natalie</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Goforth</foaf:surname>
+                        <foaf:givenName>Carl W.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Periasamy</foaf:surname>
+                        <foaf:givenName>Sivakumar</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Weir</foaf:surname>
+                        <foaf:givenName>Dawn L.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lizewski</foaf:surname>
+                        <foaf:givenName>Stephen</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lizewski</foaf:surname>
+                        <foaf:givenName>Rhonda</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ge</foaf:surname>
+                        <foaf:givenName>Yongchao</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kuzmina</foaf:surname>
+                        <foaf:givenName>Natalia A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nair</foaf:surname>
+                        <foaf:givenName>Venugopalan D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Vangeti</foaf:surname>
+                        <foaf:givenName>Sindhu</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Marjanovic</foaf:surname>
+                        <foaf:givenName>Nada</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cappuccio</foaf:surname>
+                        <foaf:givenName>Antonio</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cheng</foaf:surname>
+                        <foaf:givenName>Wan Sze</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Mofsowitz</foaf:surname>
+                        <foaf:givenName>Sagie</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Miller</foaf:surname>
+                        <foaf:givenName>Clare M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Yu</foaf:surname>
+                        <foaf:givenName>Xuechen B.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>George</foaf:surname>
+                        <foaf:givenName>Mary-Catherine</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zaslavsky</foaf:surname>
+                        <foaf:givenName>Elena</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bukreyev</foaf:surname>
+                        <foaf:givenName>Alexander</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Troyanskaya</foaf:surname>
+                        <foaf:givenName>Olga G.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sealfon</foaf:surname>
+                        <foaf:givenName>Stuart C.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Letizia</foaf:surname>
+                        <foaf:givenName>Andrew G.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ramos</foaf:surname>
+                        <foaf:givenName>Irene</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_17"/>
+        <link:link rdf:resource="#item_4"/>
+        <link:link rdf:resource="#item_3"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>antibodies</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>asymptomatic</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>COVID-19</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Fibroblast Growth Factors</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Humans</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>inflammation</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>innate immunity</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Interleukin-17</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Matrix Metalloproteinase 10</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>proteomics</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Proteomics</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>SARS-CoV-2</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>serum</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Asymptomatic SARS-CoV-2 Infection Is Associated With Higher Levels of Serum IL-17C, Matrix Metalloproteinase 10 and Fibroblast Growth Factors Than Mild Symptomatic COVID-19</dc:title>
+        <dcterms:abstract>Young adults infected with SARS-CoV-2 are frequently asymptomatic or develop only mild disease. Because capturing representative mild and asymptomatic cases require active surveillance, they are less characterized than moderate or severe cases of COVID-19. However, a better understanding of SARS-CoV-2 asymptomatic infections might shed light into the immune mechanisms associated with the control of symptoms and protection. To this aim, we have determined the temporal dynamics of the humoral immune response, as well as the serum inflammatory profile, of mild and asymptomatic SARS-CoV-2 infections in a cohort of 172 initially seronegative prospectively studied United States Marine recruits, 149 of whom were subsequently found to be SARS-CoV-2 infected. The participants had blood samples taken, symptoms surveyed and PCR tests for SARS-CoV-2 performed periodically for up to 105 days. We found similar dynamics in the profiles of viral load and in the generation of specific antibody responses in asymptomatic and mild symptomatic participants. A proteomic analysis using an inflammatory panel including 92 analytes revealed a pattern of three temporal waves of inflammatory and immunoregulatory mediators, and a return to baseline for most of the inflammatory markers by 35 days post-infection. We found that 23 analytes were significantly higher in those participants that reported symptoms at the time of the first positive SARS-CoV-2 PCR compared with asymptomatic participants, including mostly chemokines and cytokines associated with inflammatory response or immune activation (i.e., TNF-α, TNF-β, CXCL10, IL-8). Notably, we detected 7 analytes (IL-17C, MMP-10, FGF-19, FGF-21, FGF-23, CXCL5 and CCL23) that were higher in asymptomatic participants than in participants with symptoms; these are known to be involved in tissue repair and may be related to the control of symptoms. Overall, we found a serum proteomic signature that differentiates asymptomatic and mild symptomatic infections in young adults, including potential targets for developing new therapies and prognostic tests.</dcterms:abstract>
+        <dc:date>2022</dc:date>
+        <z:language>eng</z:language>
+        <z:libraryCatalog>PubMed</z:libraryCatalog>
+        <dc:description>PMID: 35479098
+PMCID: PMC9037090</dc:description>
+        <bib:pages>821730</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1664-3224">
+        <prism:volume>13</prism:volume>
+        <dc:title>Frontiers in Immunology</dc:title>
+        <dc:identifier>DOI 10.3389/fimmu.2022.821730</dc:identifier>
+        <dcterms:alternative>Front Immunol</dcterms:alternative>
+        <dc:identifier>ISSN 1664-3224</dc:identifier>
+    </bib:Journal>
+    <bib:Memo rdf:about="#item_17">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;GSE198449&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_4">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/4/Soares-Schanoski et al. - 2022 - Asymptomatic SARS-CoV-2 Infection Is Associated Wi.pdf"/>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.frontiersin.org/articles/10.3389/fimmu.2022.821730/pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-16 22:57:32</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_3">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PubMed entry</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://www.ncbi.nlm.nih.gov/pubmed/35479098</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-16 22:57:23</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_5">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1744-4292"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Mao</foaf:surname>
+                        <foaf:givenName>Weiguang</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Miller</foaf:surname>
+                        <foaf:givenName>Clare M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nair</foaf:surname>
+                        <foaf:givenName>Venugopalan D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ge</foaf:surname>
+                        <foaf:givenName>Yongchao</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Amper</foaf:surname>
+                        <foaf:givenName>Mary Anne S.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cappuccio</foaf:surname>
+                        <foaf:givenName>Antonio</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>George</foaf:surname>
+                        <foaf:givenName>Mary-Catherine</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Goforth</foaf:surname>
+                        <foaf:givenName>Carl W.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Guevara</foaf:surname>
+                        <foaf:givenName>Kristy</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Marjanovic</foaf:surname>
+                        <foaf:givenName>Nada</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nudelman</foaf:surname>
+                        <foaf:givenName>German</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pincas</foaf:surname>
+                        <foaf:givenName>Hanna</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ramos</foaf:surname>
+                        <foaf:givenName>Irene</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sealfon</foaf:surname>
+                        <foaf:givenName>Rachel S. G.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Soares-Schanoski</foaf:surname>
+                        <foaf:givenName>Alessandra</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Vangeti</foaf:surname>
+                        <foaf:givenName>Sindhu</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Vasoya</foaf:surname>
+                        <foaf:givenName>Mital</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Weir</foaf:surname>
+                        <foaf:givenName>Dawn L.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zaslavsky</foaf:surname>
+                        <foaf:givenName>Elena</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                       <foaf:surname>Biobank Team</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kim-Schulze</foaf:surname>
+                        <foaf:givenName>Seunghee</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gnjatic</foaf:surname>
+                        <foaf:givenName>Sacha</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Merad</foaf:surname>
+                        <foaf:givenName>Miriam</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Letizia</foaf:surname>
+                        <foaf:givenName>Andrew G.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Troyanskaya</foaf:surname>
+                        <foaf:givenName>Olga G.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sealfon</foaf:surname>
+                        <foaf:givenName>Stuart C.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Chikina</foaf:surname>
+                        <foaf:givenName>Maria</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_16"/>
+        <link:link rdf:resource="#item_6"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>COVID-19</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Humans</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>SARS-CoV-2</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>DNA methylation</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>DNA Methylation</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>machine learning model</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Prospective Studies</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Protein Processing, Post-Translational</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>temporal dynamics</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>trained immunity</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Young Adult</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:title>A methylation clock model of mild SARS-CoV-2 infection provides insight into immune dysregulation</dc:title>
+        <dcterms:abstract>DNA methylation comprises a cumulative record of lifetime exposures superimposed on genetically determined markers. Little is known about methylation dynamics in humans following an acute perturbation, such as infection. We characterized the temporal trajectory of blood epigenetic remodeling in 133 participants in a prospective study of young adults before, during, and after asymptomatic and mildly symptomatic SARS-CoV-2 infection. The differential methylation caused by asymptomatic or mildly symptomatic infections was indistinguishable. While differential gene expression largely returned to baseline levels after the virus became undetectable, some differentially methylated sites persisted for months of follow-up, with a pattern resembling autoimmune or inflammatory disease. We leveraged these responses to construct methylation-based machine learning models that distinguished samples from pre-, during-, and postinfection time periods, and quantitatively predicted the time since infection. The clinical trajectory in the young adults and in a diverse cohort with more severe outcomes was predicted by the similarity of methylation before or early after SARS-CoV-2 infection to the model-defined postinfection state. Unlike the phenomenon of trained immunity, the postacute SARS-CoV-2 epigenetic landscape we identify is antiprotective.</dcterms:abstract>
+        <dc:date>2023-05-09</dc:date>
+        <z:language>eng</z:language>
+        <z:libraryCatalog>PubMed</z:libraryCatalog>
+        <dc:description>PMID: 36919946
+PMCID: PMC10167476</dc:description>
+        <bib:pages>e11361</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1744-4292">
+        <prism:volume>19</prism:volume>
+        <dc:title>Molecular Systems Biology</dc:title>
+        <dc:identifier>DOI 10.15252/msb.202211361</dc:identifier>
+        <prism:number>5</prism:number>
+        <dcterms:alternative>Mol Syst Biol</dcterms:alternative>
+        <dc:identifier>ISSN 1744-4292</dc:identifier>
+    </bib:Journal>
+    <bib:Memo rdf:about="#item_16">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;GSE198449&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_6">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PubMed entry</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://www.ncbi.nlm.nih.gov/pubmed/36919946</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-16 22:59:39</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_7">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:2075-1729"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ren</foaf:surname>
+                        <foaf:givenName>Jingxin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zhang</foaf:surname>
+                        <foaf:givenName>Yuhang</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Guo</foaf:surname>
+                        <foaf:givenName>Wei</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Feng</foaf:surname>
+                        <foaf:givenName>Kaiyan</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Yuan</foaf:surname>
+                        <foaf:givenName>Ye</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Huang</foaf:surname>
+                        <foaf:givenName>Tao</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cai</foaf:surname>
+                        <foaf:givenName>Yu-Dong</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_19"/>
+        <link:link rdf:resource="#item_9"/>
+        <link:link rdf:resource="#item_8"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>COVID-19</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>gene identification</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>gustatory function</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>machine learning</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>olfactory function</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Identification of Genes Associated with the Impairment of Olfactory and Gustatory Functions in COVID-19 via Machine-Learning Methods</dc:title>
+        <dcterms:abstract>The coronavirus disease 2019 (COVID-19), as a severe respiratory disease, affects many parts of the body, and approximately 20-85% of patients exhibit functional impairment of the senses of smell and taste, some of whom even experience the permanent loss of these senses. These symptoms are not life-threatening but severely affect patients' quality of life and increase the risk of depression and anxiety. The pathological mechanisms of these symptoms have not been fully identified. In the current study, we aimed to identify the important biomarkers at the expression level associated with the severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infection-mediated loss of taste or olfactory ability, and we have suggested the potential pathogenetic mechanisms of COVID-19 complications. We designed a machine-learning-based approach to analyze the transcriptome of 577 COVID-19 patient samples, including 84 COVID-19 samples with a decreased ability to taste or smell and 493 COVID-19 samples without impairment. Each sample was represented by 58,929 gene expression levels. The features were analyzed and sorted by three feature selection methods (least absolute shrinkage and selection operator, light gradient boosting machine, and Monte Carlo feature selection). The optimal feature sets were obtained through incremental feature selection using two classification algorithms: decision tree (DT) and random forest (RF). The top genes identified by these multiple methods (H3-5, NUDT5, and AOC1) are involved in olfactory and gustatory impairments. Meanwhile, a high-performance RF classifier was developed in this study, and three sets of quantitative rules that describe the impairment of olfactory and gustatory functions were obtained based on the optimal DT classifiers. In summary, this study provides a new computation analysis and suggests the latent biomarkers (genes and rules) for predicting olfactory and gustatory impairment caused by COVID-19 complications.</dcterms:abstract>
+        <dc:date>2023-03-15</dc:date>
+        <z:language>eng</z:language>
+        <z:libraryCatalog>PubMed</z:libraryCatalog>
+        <dc:description>PMID: 36983953
+PMCID: PMC10051382</dc:description>
+        <bib:pages>798</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:2075-1729">
+        <prism:volume>13</prism:volume>
+        <dc:title>Life (Basel, Switzerland)</dc:title>
+        <dc:identifier>DOI 10.3390/life13030798</dc:identifier>
+        <prism:number>3</prism:number>
+        <dcterms:alternative>Life (Basel)</dcterms:alternative>
+        <dc:identifier>ISSN 2075-1729</dc:identifier>
+    </bib:Journal>
+    <bib:Memo rdf:about="#item_19">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;GSE198449&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_9">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/9/Ren et al. - 2023 - Identification of Genes Associated with the Impair.pdf"/>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.mdpi.com/2075-1729/13/3/798/pdf?version=1678875733</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-16 23:00:51</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PubMed entry</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://www.ncbi.nlm.nih.gov/pubmed/36983953</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-16 23:00:50</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_10">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:2405-4720"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sauerwald</foaf:surname>
+                        <foaf:givenName>Natalie</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zhang</foaf:surname>
+                        <foaf:givenName>Zijun</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ramos</foaf:surname>
+                        <foaf:givenName>Irene</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nair</foaf:surname>
+                        <foaf:givenName>Venugopalan D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Soares-Schanoski</foaf:surname>
+                        <foaf:givenName>Alessandra</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ge</foaf:surname>
+                        <foaf:givenName>Yongchao</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Mao</foaf:surname>
+                        <foaf:givenName>Weiguang</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Alshammary</foaf:surname>
+                        <foaf:givenName>Hala</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gonzalez-Reiche</foaf:surname>
+                        <foaf:givenName>Ana S.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>van de Guchte</foaf:surname>
+                        <foaf:givenName>Adriana</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Goforth</foaf:surname>
+                        <foaf:givenName>Carl W.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lizewski</foaf:surname>
+                        <foaf:givenName>Rhonda A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lizewski</foaf:surname>
+                        <foaf:givenName>Stephen E.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Amper</foaf:surname>
+                        <foaf:givenName>Mary Anne S.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Vasoya</foaf:surname>
+                        <foaf:givenName>Mital</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Seenarine</foaf:surname>
+                        <foaf:givenName>Nitish</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Guevara</foaf:surname>
+                        <foaf:givenName>Kristy</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Marjanovic</foaf:surname>
+                        <foaf:givenName>Nada</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Miller</foaf:surname>
+                        <foaf:givenName>Clare M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nudelman</foaf:surname>
+                        <foaf:givenName>German</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Schilling</foaf:surname>
+                        <foaf:givenName>Megan A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sealfon</foaf:surname>
+                        <foaf:givenName>Rachel S. G.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Termini</foaf:surname>
+                        <foaf:givenName>Michael S.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Vangeti</foaf:surname>
+                        <foaf:givenName>Sindhu</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Weir</foaf:surname>
+                        <foaf:givenName>Dawn L.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zaslavsky</foaf:surname>
+                        <foaf:givenName>Elena</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Chikina</foaf:surname>
+                        <foaf:givenName>Maria</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wu</foaf:surname>
+                        <foaf:givenName>Ying Nian</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Van Bakel</foaf:surname>
+                        <foaf:givenName>Harm</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Letizia</foaf:surname>
+                        <foaf:givenName>Andrew G.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sealfon</foaf:surname>
+                        <foaf:givenName>Stuart C.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Troyanskaya</foaf:surname>
+                        <foaf:givenName>Olga G.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_20"/>
+        <link:link rdf:resource="#item_12"/>
+        <link:link rdf:resource="#item_11"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>COVID-19</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Humans</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Proteomics</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>SARS-CoV-2</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Young Adult</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>alternative splicing</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>causal mediation</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>differential expression</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Female</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Immunity, Innate</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>interferon-stimulated genes</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Interferons</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Male</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Sex Characteristics</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>sex differences</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>viral infection</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Pre-infection antiviral innate immunity contributes to sex differences in SARS-CoV-2 infection</dc:title>
+        <dcterms:abstract>Male sex is a major risk factor for SARS-CoV-2 infection severity. To understand the basis for this sex difference, we studied SARS-CoV-2 infection in a young adult cohort of United States Marine recruits. Among 2,641 male and 244 female unvaccinated and seronegative recruits studied longitudinally, SARS-CoV-2 infections occurred in 1,033 males and 137 females. We identified sex differences in symptoms, viral load, blood transcriptome, RNA splicing, and proteomic signatures. Females had higher pre-infection expression of antiviral interferon-stimulated gene (ISG) programs. Causal mediation analysis implicated ISG differences in number of symptoms, levels of ISGs, and differential splicing of CD45 lymphocyte phosphatase during infection. Our results indicate that the antiviral innate immunity set point causally contributes to sex differences in response to SARS-CoV-2 infection. A record of this paper's transparent peer review process is included in the supplemental information.</dcterms:abstract>
+        <dc:date>2022-11-16</dc:date>
+        <z:language>eng</z:language>
+        <z:libraryCatalog>PubMed</z:libraryCatalog>
+        <dc:description>PMID: 36323307
+PMCID: PMC9623453</dc:description>
+        <bib:pages>924-931.e4</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:2405-4720">
+        <prism:volume>13</prism:volume>
+        <dc:title>Cell Systems</dc:title>
+        <dc:identifier>DOI 10.1016/j.cels.2022.10.005</dc:identifier>
+        <prism:number>11</prism:number>
+        <dcterms:alternative>Cell Syst</dcterms:alternative>
+        <dc:identifier>ISSN 2405-4720</dc:identifier>
+    </bib:Journal>
+    <bib:Memo rdf:about="#item_20">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;GSE198449&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_12">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/12/Sauerwald et al. - 2022 - Pre-infection antiviral innate immunity contribute.pdf"/>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.cell.com/article/S240547122200432X/pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-16 23:01:10</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_11">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PubMed entry</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://www.ncbi.nlm.nih.gov/pubmed/36323307</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-16 23:01:09</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_13">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:2667-2375"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zhang</foaf:surname>
+                        <foaf:givenName>Zijun</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sauerwald</foaf:surname>
+                        <foaf:givenName>Natalie</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cappuccio</foaf:surname>
+                        <foaf:givenName>Antonio</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ramos</foaf:surname>
+                        <foaf:givenName>Irene</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nair</foaf:surname>
+                        <foaf:givenName>Venugopalan D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nudelman</foaf:surname>
+                        <foaf:givenName>German</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zaslavsky</foaf:surname>
+                        <foaf:givenName>Elena</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ge</foaf:surname>
+                        <foaf:givenName>Yongchao</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gaitas</foaf:surname>
+                        <foaf:givenName>Angelo</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ren</foaf:surname>
+                        <foaf:givenName>Hui</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Brockman</foaf:surname>
+                        <foaf:givenName>Joel</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Geis</foaf:surname>
+                        <foaf:givenName>Jennifer</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ramalingam</foaf:surname>
+                        <foaf:givenName>Naveen</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>King</foaf:surname>
+                        <foaf:givenName>David</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>McClain</foaf:surname>
+                        <foaf:givenName>Micah T.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Woods</foaf:surname>
+                        <foaf:givenName>Christopher W.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Henao</foaf:surname>
+                        <foaf:givenName>Ricardo</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Burke</foaf:surname>
+                        <foaf:givenName>Thomas W.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Tsalik</foaf:surname>
+                        <foaf:givenName>Ephraim L.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Goforth</foaf:surname>
+                        <foaf:givenName>Carl W.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lizewski</foaf:surname>
+                        <foaf:givenName>Rhonda A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lizewski</foaf:surname>
+                        <foaf:givenName>Stephen E.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Weir</foaf:surname>
+                        <foaf:givenName>Dawn L.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Letizia</foaf:surname>
+                        <foaf:givenName>Andrew G.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sealfon</foaf:surname>
+                        <foaf:givenName>Stuart C.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Troyanskaya</foaf:surname>
+                        <foaf:givenName>Olga G.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_18"/>
+        <link:link rdf:resource="#item_15"/>
+        <link:link rdf:resource="#item_14"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>COVID-19</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Humans</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>SARS-CoV-2</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Prospective Studies</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>viral infection</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Alternative Splicing</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Biomarkers</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Communicable Diseases</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>COVID-19 Testing</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>diagnostic biomarker</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>host response assays</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>infectious disease</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>RNA</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>RNA splicing</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Blood RNA alternative splicing events as diagnostic biomarkers for infectious disease</dc:title>
+        <dcterms:abstract>Assays detecting blood transcriptome changes are studied for infectious disease diagnosis. Blood-based RNA alternative splicing (AS) events, which have not been well characterized in pathogen infection, have potential normalization and assay platform stability advantages over gene expression for diagnosis. Here, we present a computational framework for developing AS diagnostic biomarkers. Leveraging a large prospective cohort of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infection and whole-blood RNA sequencing (RNA-seq) data, we identify a major functional AS program switch upon viral infection. Using an independent cohort, we demonstrate the improved accuracy of AS biomarkers for SARS-CoV-2 diagnosis compared with six reported transcriptome signatures. We then optimize a subset of AS-based biomarkers to develop microfluidic PCR diagnostic assays. This assay achieves nearly perfect test accuracy (61/62 = 98.4%) using a naive principal component classifier, significantly more accurate than a gene expression PCR assay in the same cohort. Therefore, our RNA splicing computational framework enables a promising avenue for host-response diagnosis of infection.</dcterms:abstract>
+        <dc:date>2023-02-27</dc:date>
+        <z:language>eng</z:language>
+        <z:libraryCatalog>PubMed</z:libraryCatalog>
+        <dc:description>PMID: 36936082
+PMCID: PMC10014279</dc:description>
+        <bib:pages>100395</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:2667-2375">
+        <prism:volume>3</prism:volume>
+        <dc:title>Cell Reports Methods</dc:title>
+        <dc:identifier>DOI 10.1016/j.crmeth.2023.100395</dc:identifier>
+        <prism:number>2</prism:number>
+        <dcterms:alternative>Cell Rep Methods</dcterms:alternative>
+        <dc:identifier>ISSN 2667-2375</dc:identifier>
+    </bib:Journal>
+    <bib:Memo rdf:about="#item_18">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;GSE198449&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_15">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/15/Zhang et al. - 2023 - Blood RNA alternative splicing events as diagnosti.pdf"/>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10014279/pdf/main.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-16 23:01:40</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_14">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PubMed entry</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://www.ncbi.nlm.nih.gov/pubmed/36936082</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-16 23:01:22</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_21">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1546-170X"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Thompson</foaf:surname>
+                        <foaf:givenName>Ryan C.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Simons</foaf:surname>
+                        <foaf:givenName>Nicole W.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wilkins</foaf:surname>
+                        <foaf:givenName>Lillian</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cheng</foaf:surname>
+                        <foaf:givenName>Esther</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Del Valle</foaf:surname>
+                        <foaf:givenName>Diane Marie</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hoffman</foaf:surname>
+                        <foaf:givenName>Gabriel E.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cervia</foaf:surname>
+                        <foaf:givenName>Carlo</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Fennessy</foaf:surname>
+                        <foaf:givenName>Brian</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Mouskas</foaf:surname>
+                        <foaf:givenName>Konstantinos</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Francoeur</foaf:surname>
+                        <foaf:givenName>Nancy J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Johnson</foaf:surname>
+                        <foaf:givenName>Jessica S.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lepow</foaf:surname>
+                        <foaf:givenName>Lauren</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Le Berichel</foaf:surname>
+                        <foaf:givenName>Jessica</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Chang</foaf:surname>
+                        <foaf:givenName>Christie</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Beckmann</foaf:surname>
+                        <foaf:givenName>Aviva G.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wang</foaf:surname>
+                        <foaf:givenName>Ying-Chih</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nie</foaf:surname>
+                        <foaf:givenName>Kai</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zaki</foaf:surname>
+                        <foaf:givenName>Nicholas</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Tuballes</foaf:surname>
+                        <foaf:givenName>Kevin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Barcessat</foaf:surname>
+                        <foaf:givenName>Vanessa</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cedillo</foaf:surname>
+                        <foaf:givenName>Mario A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Yuan</foaf:surname>
+                        <foaf:givenName>Dan</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Huckins</foaf:surname>
+                        <foaf:givenName>Laura</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Roussos</foaf:surname>
+                        <foaf:givenName>Panos</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Marron</foaf:surname>
+                        <foaf:givenName>Thomas U.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Mount Sinai COVID-19 Biobank Team</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Glicksberg</foaf:surname>
+                        <foaf:givenName>Benjamin S.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nadkarni</foaf:surname>
+                        <foaf:givenName>Girish</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Heath</foaf:surname>
+                        <foaf:givenName>James R.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gonzalez-Kozlova</foaf:surname>
+                        <foaf:givenName>Edgar</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Boyman</foaf:surname>
+                        <foaf:givenName>Onur</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kim-Schulze</foaf:surname>
+                        <foaf:givenName>Seunghee</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sebra</foaf:surname>
+                        <foaf:givenName>Robert</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Merad</foaf:surname>
+                        <foaf:givenName>Miriam</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gnjatic</foaf:surname>
+                        <foaf:givenName>Sacha</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Schadt</foaf:surname>
+                        <foaf:givenName>Eric E.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Charney</foaf:surname>
+                        <foaf:givenName>Alexander W.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Beckmann</foaf:surname>
+                        <foaf:givenName>Noam D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_24"/>
+        <link:link rdf:resource="#item_23"/>
+        <link:link rdf:resource="#item_22"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>COVID-19</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Humans</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>SARS-CoV-2</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Antibodies, Viral</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Molecular states during acute COVID-19 reveal distinct etiologies of long-term sequelae</dc:title>
+        <dcterms:abstract>Post-acute sequelae of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infection are debilitating, clinically heterogeneous and of unknown molecular etiology. A transcriptome-wide investigation was performed in 165 acutely infected hospitalized individuals who were followed clinically into the post-acute period. Distinct gene expression signatures of post-acute sequelae were already present in whole blood during acute infection, with innate and adaptive immune cells implicated in different symptoms. Two clusters of sequelae exhibited divergent plasma-cell-associated gene expression patterns. In one cluster, sequelae associated with higher expression of immunoglobulin-related genes in an anti-spike antibody titer-dependent manner. In the other, sequelae associated independently of these titers with lower expression of immunoglobulin-related genes, indicating lower non-specific antibody production in individuals with these sequelae. This relationship between lower total immunoglobulins and sequelae was validated in an external cohort. Altogether, multiple etiologies of post-acute sequelae were already detectable during SARS-CoV-2 infection, directly linking these sequelae with the acute host response to the virus and providing early insights into their development.</dcterms:abstract>
+        <dc:date>2023-01</dc:date>
+        <z:language>eng</z:language>
+        <z:libraryCatalog>PubMed</z:libraryCatalog>
+        <dc:description>PMID: 36482101
+PMCID: PMC9873574</dc:description>
+        <bib:pages>236-246</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1546-170X">
+        <prism:volume>29</prism:volume>
+        <dc:title>Nature Medicine</dc:title>
+        <dc:identifier>DOI 10.1038/s41591-022-02107-4</dc:identifier>
+        <prism:number>1</prism:number>
+        <dcterms:alternative>Nat Med</dcterms:alternative>
+        <dc:identifier>ISSN 1546-170X</dc:identifier>
+    </bib:Journal>
+    <bib:Memo rdf:about="#item_24">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;GSE215865&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_23">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/23/Thompson et al. - 2023 - Molecular states during acute COVID-19 reveal dist.pdf"/>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.nature.com/articles/s41591-022-02107-4.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-16 23:08:16</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_22">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PubMed entry</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://www.ncbi.nlm.nih.gov/pubmed/36482101</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-16 23:08:14</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_25">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:2666-3791"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>LaSalle</foaf:surname>
+                        <foaf:givenName>Thomas J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gonye</foaf:surname>
+                        <foaf:givenName>Anna L. K.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Freeman</foaf:surname>
+                        <foaf:givenName>Samuel S.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kaplonek</foaf:surname>
+                        <foaf:givenName>Paulina</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gushterova</foaf:surname>
+                        <foaf:givenName>Irena</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kays</foaf:surname>
+                        <foaf:givenName>Kyle R.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Manakongtreecheep</foaf:surname>
+                        <foaf:givenName>Kasidet</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Tantivit</foaf:surname>
+                        <foaf:givenName>Jessica</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Rojas-Lopez</foaf:surname>
+                        <foaf:givenName>Maricarmen</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Russo</foaf:surname>
+                        <foaf:givenName>Brian C.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sharma</foaf:surname>
+                        <foaf:givenName>Nihaarika</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Thomas</foaf:surname>
+                        <foaf:givenName>Molly F.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lavin-Parsons</foaf:surname>
+                        <foaf:givenName>Kendall M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lilly</foaf:surname>
+                        <foaf:givenName>Brendan M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Mckaig</foaf:surname>
+                        <foaf:givenName>Brenna N.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Charland</foaf:surname>
+                        <foaf:givenName>Nicole C.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Khanna</foaf:surname>
+                        <foaf:givenName>Hargun K.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lodenstein</foaf:surname>
+                        <foaf:givenName>Carl L.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Margolin</foaf:surname>
+                        <foaf:givenName>Justin D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Blaum</foaf:surname>
+                        <foaf:givenName>Emily M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lirofonis</foaf:surname>
+                        <foaf:givenName>Paola B.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Revach</foaf:surname>
+                        <foaf:givenName>Or-Yam</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Mehta</foaf:surname>
+                        <foaf:givenName>Arnav</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sonny</foaf:surname>
+                        <foaf:givenName>Abraham</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bhattacharyya</foaf:surname>
+                        <foaf:givenName>Roby P.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Parry</foaf:surname>
+                        <foaf:givenName>Blair Alden</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Goldberg</foaf:surname>
+                        <foaf:givenName>Marcia B.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Alter</foaf:surname>
+                        <foaf:givenName>Galit</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Filbin</foaf:surname>
+                        <foaf:givenName>Michael R.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Villani</foaf:surname>
+                        <foaf:givenName>Alexandra-Chloé</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hacohen</foaf:surname>
+                        <foaf:givenName>Nir</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sade-Feldman</foaf:surname>
+                        <foaf:givenName>Moshe</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_28"/>
+        <link:link rdf:resource="#item_27"/>
+        <link:link rdf:resource="#item_26"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>COVID-19</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Humans</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>SARS-CoV-2</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>degranulation</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>G-MDSC</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>IgA</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Immunoglobulin A</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Immunoglobulin G</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>NETosis</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>neutrophil</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Neutrophils</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Phenotype</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>transcriptomics</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Longitudinal characterization of circulating neutrophils uncovers phenotypes associated with severity in hospitalized COVID-19 patients</dc:title>
+        <dcterms:abstract>Mechanisms of neutrophil involvement in severe coronavirus disease 2019 (COVID-19) remain incompletely understood. Here, we collect longitudinal blood samples from 306 hospitalized COVID-19+ patients and 86 controls and perform bulk RNA sequencing of enriched neutrophils, plasma proteomics, and high-throughput antibody profiling to investigate relationships between neutrophil states and disease severity. We identify dynamic switches between six distinct neutrophil subtypes. At days 3 and 7 post-hospitalization, patients with severe disease display a granulocytic myeloid-derived suppressor cell-like gene expression signature, while patients with resolving disease show a neutrophil progenitor-like signature. Humoral responses are identified as potential drivers of neutrophil effector functions, with elevated severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)-specific immunoglobulin G1 (IgG1)-to-IgA1 ratios in plasma of severe patients who survived. In vitro experiments confirm that while patient-derived IgG antibodies induce phagocytosis in healthy donor neutrophils, IgA antibodies predominantly induce neutrophil cell death. Overall, our study demonstrates a dysregulated myelopoietic response in severe COVID-19 and a potential role for IgA-dominant responses contributing to mortality.</dcterms:abstract>
+        <dc:date>2022-10-18</dc:date>
+        <z:language>eng</z:language>
+        <z:libraryCatalog>PubMed</z:libraryCatalog>
+        <dc:description>PMID: 36208629
+PMCID: PMC9510054</dc:description>
+        <bib:pages>100779</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:2666-3791">
+        <prism:volume>3</prism:volume>
+        <dc:title>Cell Reports. Medicine</dc:title>
+        <dc:identifier>DOI 10.1016/j.xcrm.2022.100779</dc:identifier>
+        <prism:number>10</prism:number>
+        <dcterms:alternative>Cell Rep Med</dcterms:alternative>
+        <dc:identifier>ISSN 2666-3791</dc:identifier>
+    </bib:Journal>
+    <bib:Memo rdf:about="#item_28">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;GSE212041&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_27">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/27/LaSalle et al. - 2022 - Longitudinal characterization of circulating neutr.pdf"/>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.cell.com/article/S2666379122003342/pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-16 23:09:56</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_26">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PubMed entry</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://www.ncbi.nlm.nih.gov/pubmed/36208629</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-16 23:09:53</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_29">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1474-760X"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Conesa</foaf:surname>
+                        <foaf:givenName>Ana</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Madrigal</foaf:surname>
+                        <foaf:givenName>Pedro</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Tarazona</foaf:surname>
+                        <foaf:givenName>Sonia</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gomez-Cabrero</foaf:surname>
+                        <foaf:givenName>David</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cervera</foaf:surname>
+                        <foaf:givenName>Alejandra</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>McPherson</foaf:surname>
+                        <foaf:givenName>Andrew</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Szcześniak</foaf:surname>
+                        <foaf:givenName>Michał Wojciech</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gaffney</foaf:surname>
+                        <foaf:givenName>Daniel J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Elo</foaf:surname>
+                        <foaf:givenName>Laura L.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zhang</foaf:surname>
+                        <foaf:givenName>Xuegong</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Mortazavi</foaf:surname>
+                        <foaf:givenName>Ali</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_31"/>
+        <link:link rdf:resource="#item_30"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Alternative Splicing</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>RNA</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Base Sequence</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Gene Expression Profiling</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Gene Fusion</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Genomics</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>High-Throughput Nucleotide Sequencing</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Sequence Analysis, RNA</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Software</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:title>A survey of best practices for RNA-seq data analysis</dc:title>
+        <dcterms:abstract>RNA-sequencing (RNA-seq) has a wide variety of applications, but no single analysis pipeline can be used in all cases. We review all of the major steps in RNA-seq data analysis, including experimental design, quality control, read alignment, quantification of gene and transcript levels, visualization, differential gene expression, alternative splicing, functional analysis, gene fusion detection and eQTL mapping. We highlight the challenges associated with each step. We discuss the analysis of small RNAs and the integration of RNA-seq with other functional genomics techniques. Finally, we discuss the outlook for novel technologies that are changing the state of the art in transcriptomics.</dcterms:abstract>
+        <dc:date>2016-01-26</dc:date>
+        <z:language>eng</z:language>
+        <z:libraryCatalog>PubMed</z:libraryCatalog>
+        <dc:description>PMID: 26813401
+PMCID: PMC4728800</dc:description>
+        <bib:pages>13</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1474-760X">
+        <prism:volume>17</prism:volume>
+        <dc:title>Genome Biology</dc:title>
+        <dc:identifier>DOI 10.1186/s13059-016-0881-8</dc:identifier>
+        <dcterms:alternative>Genome Biol</dcterms:alternative>
+        <dc:identifier>ISSN 1474-760X</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_31">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/31/Conesa et al. - 2016 - A survey of best practices for RNA-seq data analys.pdf"/>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-016-0881-8</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-16 23:12:18</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_30">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PubMed entry</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://www.ncbi.nlm.nih.gov/pubmed/26813401</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-16 23:12:17</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_32">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1471-2105"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Abrams</foaf:surname>
+                        <foaf:givenName>Zachary B.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Johnson</foaf:surname>
+                        <foaf:givenName>Travis S.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Huang</foaf:surname>
+                        <foaf:givenName>Kun</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Payne</foaf:surname>
+                        <foaf:givenName>Philip R. O.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Coombes</foaf:surname>
+                        <foaf:givenName>Kevin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_34"/>
+        <link:link rdf:resource="#item_33"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Humans</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>RNA</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Genomics</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Sequence Analysis, RNA</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Biological variability</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Genome</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Normalization</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>RNASeq</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Standardization</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Transcriptome</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:title>A protocol to evaluate RNA sequencing normalization methods</dc:title>
+        <dcterms:abstract>BACKGROUND: RNA sequencing technologies have allowed researchers to gain a better understanding of how the transcriptome affects disease. However, sequencing technologies often unintentionally introduce experimental error into RNA sequencing data. To counteract this, normalization methods are standardly applied with the intent of reducing the non-biologically derived variability inherent in transcriptomic measurements. However, the comparative efficacy of the various normalization techniques has not been tested in a standardized manner. Here we propose tests that evaluate numerous normalization techniques and applied them to a large-scale standard data set. These tests comprise a protocol that allows researchers to measure the amount of non-biological variability which is present in any data set after normalization has been performed, a crucial step to assessing the biological validity of data following normalization.
+RESULTS: In this study we present two tests to assess the validity of normalization methods applied to a large-scale data set collected for systematic evaluation purposes. We tested various RNASeq normalization procedures and concluded that transcripts per million (TPM) was the best performing normalization method based on its preservation of biological signal as compared to the other methods tested.
+CONCLUSION: Normalization is of vital importance to accurately interpret the results of genomic and transcriptomic experiments. More work, however, needs to be performed to optimize normalization methods for RNASeq data. The present effort helps pave the way for more systematic evaluations of normalization methods across different platforms. With our proposed schema researchers can evaluate their own or future normalization methods to further improve the field of RNASeq normalization.</dcterms:abstract>
+        <dc:date>2019-12-20</dc:date>
+        <z:language>eng</z:language>
+        <z:libraryCatalog>PubMed</z:libraryCatalog>
+        <dc:description>PMID: 31861985
+PMCID: PMC6923842</dc:description>
+        <bib:pages>679</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1471-2105">
+        <prism:volume>20</prism:volume>
+        <dc:title>BMC bioinformatics</dc:title>
+        <dc:identifier>DOI 10.1186/s12859-019-3247-x</dc:identifier>
+        <prism:number>Suppl 24</prism:number>
+        <dcterms:alternative>BMC Bioinformatics</dcterms:alternative>
+        <dc:identifier>ISSN 1471-2105</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_34">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/34/Abrams et al. - 2019 - A protocol to evaluate RNA sequencing normalizatio.pdf"/>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://bmcbioinformatics.biomedcentral.com/track/pdf/10.1186/s12859-019-3247-x</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-16 23:13:21</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_33">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PubMed entry</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://www.ncbi.nlm.nih.gov/pubmed/31861985</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-16 23:13:18</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.ncbi.nlm.nih.gov/geo/browse/?view=series&amp;search=covid&amp;display=20&amp;zsort=samples">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_36"/>
+        <dc:title>GEO Browser - GEO - NCBI</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.ncbi.nlm.nih.gov/geo/browse/?view=series&amp;search=covid&amp;display=20&amp;zsort=samples</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-17 03:58:13</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_36">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/36/browse.html"/>
+        <dc:title>GEO Browser - GEO - NCBI</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.ncbi.nlm.nih.gov/geo/browse/?view=series&amp;search=covid&amp;display=20&amp;zsort=samples</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-17 03:58:18</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE198449">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_38"/>
+        <dc:title>GEO Accession viewer</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE198449</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-17 04:03:18</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_38">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/38/acc.html"/>
+        <dc:title>GEO Accession viewer</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE198449</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-17 04:03:23</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215865">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_40"/>
+        <dc:title>GEO Accession viewer</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215865</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-17 04:03:46</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_40">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/40/acc.html"/>
+        <dc:title>GEO Accession viewer</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215865</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-17 04:03:51</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_42">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>12</prism:volume>
+                <dc:title>Life (Basel, Switzerland)</dc:title>
+                <dc:identifier>DOI 10.3390/life12050648</dc:identifier>
+                <prism:number>5</prism:number>
+                <dcterms:alternative>Life (Basel)</dcterms:alternative>
+                <dc:identifier>ISSN 2075-1729</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Giorgi</foaf:surname>
+                        <foaf:givenName>Federico M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ceraolo</foaf:surname>
+                        <foaf:givenName>Carmine</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Mercatelli</foaf:surname>
+                        <foaf:givenName>Daniele</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_44"/>
+        <link:link rdf:resource="#item_43"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>bioinformatics</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>CRAN</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>data science</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>programming</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>R</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>statistics</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:title>The R Language: An Engine for Bioinformatics and Data Science</dc:title>
+        <dcterms:abstract>The R programming language is approaching its 30th birthday, and in the last three decades it has achieved a prominent role in statistics, bioinformatics, and data science in general. It currently ranks among the top 10 most popular languages worldwide, and its community has produced tens of thousands of extensions and packages, with scopes ranging from machine learning to transcriptome data analysis. In this review, we provide an historical chronicle of how R became what it is today, describing all its current features and capabilities. We also illustrate the major tools of R, such as the current R editors and integrated development environments (IDEs), the R Shiny web server, the R methods for machine learning, and its relationship with other programming languages. We also discuss the role of R in science in general as a driver for reproducibility. Overall, we hope to provide both a complete snapshot of R today and a practical compendium of the major features and applications of this programming language.</dcterms:abstract>
+        <dc:date>2022-04-27</dc:date>
+        <z:language>eng</z:language>
+        <z:shortTitle>The R Language</z:shortTitle>
+        <z:libraryCatalog>PubMed</z:libraryCatalog>
+        <dc:description>PMID: 35629316
+PMCID: PMC9148156</dc:description>
+        <bib:pages>648</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_44">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/44/Giorgi et al. - 2022 - The R Language An Engine for Bioinformatics and D.pdf"/>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.mdpi.com/2075-1729/12/5/648/pdf?version=1652413277</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-17 05:21:03</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_43">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PubMed entry</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://www.ncbi.nlm.nih.gov/pubmed/35629316</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-17 05:21:02</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_45">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1943-7811"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sepulveda</foaf:surname>
+                        <foaf:givenName>Jorge L.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_46"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Humans</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Gene Expression Profiling</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Genomics</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>High-Throughput Nucleotide Sequencing</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Software</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Transcriptome</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Computational Biology</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Programming Languages</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Reproducibility of Results</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Workflow</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Using R and Bioconductor in Clinical Genomics and Transcriptomics</dc:title>
+        <dcterms:abstract>Bioinformatics pipelines are essential in the analysis of genomic and transcriptomic data generated by next-generation sequencing (NGS). Recent guidelines emphasize the need for rigorous validation and assessment of robustness, reproducibility, and quality of NGS analytic pipelines intended for clinical use. Software tools written in the R statistical language and, in particular, the set of tools available in the Bioconductor repository are widely used in research bioinformatics; and these frameworks offer several advantages for use in clinical bioinformatics, including the breath of available tools, modular nature of software packages, ease of installation, enforcement of interoperability, version control, and short learning curve. This review provides an introduction to R and Bioconductor software, its advantages and limitations for clinical bioinformatics, and illustrative examples of tools that can be used in various steps of NGS analysis.</dcterms:abstract>
+        <dc:date>2020-01</dc:date>
+        <z:language>eng</z:language>
+        <z:libraryCatalog>PubMed</z:libraryCatalog>
+        <dc:description>PMID: 31605800</dc:description>
+        <bib:pages>3-20</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1943-7811">
+        <prism:volume>22</prism:volume>
+        <dc:title>The Journal of molecular diagnostics: JMD</dc:title>
+        <dc:identifier>DOI 10.1016/j.jmoldx.2019.08.006</dc:identifier>
+        <prism:number>1</prism:number>
+        <dcterms:alternative>J Mol Diagn</dcterms:alternative>
+        <dc:identifier>ISSN 1943-7811</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_46">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PubMed entry</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://www.ncbi.nlm.nih.gov/pubmed/31605800</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-17 05:26:01</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_47">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1552-681X"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Jalal</foaf:surname>
+                        <foaf:givenName>Hawre</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pechlivanoglou</foaf:surname>
+                        <foaf:givenName>Petros</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Krijkamp</foaf:surname>
+                        <foaf:givenName>Eline</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Alarid-Escudero</foaf:surname>
+                        <foaf:givenName>Fernando</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Enns</foaf:surname>
+                        <foaf:givenName>Eva</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hunink</foaf:surname>
+                        <foaf:givenName>M. G. Myriam</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_48"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Humans</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Software</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Programming Languages</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Cost-Benefit Analysis</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>cost-effectiveness analysis</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Data Interpretation, Statistical</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Decision Support Techniques</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>economic evaluation</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>literature review</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Markov Chains</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Models, Statistical</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>R project</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:title>An Overview of R in Health Decision Sciences</dc:title>
+        <dcterms:abstract>As the complexity of health decision science applications increases, high-level programming languages are increasingly adopted for statistical analyses and numerical computations. These programming languages facilitate sophisticated modeling, model documentation, and analysis reproducibility. Among the high-level programming languages, the statistical programming framework R is gaining increased recognition. R is freely available, cross-platform compatible, and open source. A large community of users who have generated an extensive collection of well-documented packages and functions supports it. These functions facilitate applications of health decision science methodology as well as the visualization and communication of results. Although R's popularity is increasing among health decision scientists, methodological extensions of R in the field of decision analysis remain isolated. The purpose of this article is to provide an overview of existing R functionality that is applicable to the various stages of decision analysis, including model design, input parameter estimation, and analysis of model outputs.</dcterms:abstract>
+        <dc:date>2017-10</dc:date>
+        <z:language>eng</z:language>
+        <z:libraryCatalog>PubMed</z:libraryCatalog>
+        <dc:description>PMID: 28061043</dc:description>
+        <bib:pages>735-746</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1552-681X">
+        <prism:volume>37</prism:volume>
+        <dc:title>Medical Decision Making: An International Journal of the Society for Medical Decision Making</dc:title>
+        <dc:identifier>DOI 10.1177/0272989X16686559</dc:identifier>
+        <prism:number>7</prism:number>
+        <dcterms:alternative>Med Decis Making</dcterms:alternative>
+        <dc:identifier>ISSN 1552-681X</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_48">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PubMed entry</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://www.ncbi.nlm.nih.gov/pubmed/28061043</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-17 05:27:21</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_49">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1548-7105"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Huber</foaf:surname>
+                        <foaf:givenName>Wolfgang</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Carey</foaf:surname>
+                        <foaf:givenName>Vincent J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gentleman</foaf:surname>
+                        <foaf:givenName>Robert</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Anders</foaf:surname>
+                        <foaf:givenName>Simon</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Carlson</foaf:surname>
+                        <foaf:givenName>Marc</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Carvalho</foaf:surname>
+                        <foaf:givenName>Benilton S.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bravo</foaf:surname>
+                        <foaf:givenName>Hector Corrada</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Davis</foaf:surname>
+                        <foaf:givenName>Sean</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gatto</foaf:surname>
+                        <foaf:givenName>Laurent</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Girke</foaf:surname>
+                        <foaf:givenName>Thomas</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gottardo</foaf:surname>
+                        <foaf:givenName>Raphael</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hahne</foaf:surname>
+                        <foaf:givenName>Florian</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hansen</foaf:surname>
+                        <foaf:givenName>Kasper D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Irizarry</foaf:surname>
+                        <foaf:givenName>Rafael A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lawrence</foaf:surname>
+                        <foaf:givenName>Michael</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Love</foaf:surname>
+                        <foaf:givenName>Michael I.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>MacDonald</foaf:surname>
+                        <foaf:givenName>James</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Obenchain</foaf:surname>
+                        <foaf:givenName>Valerie</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Oleś</foaf:surname>
+                        <foaf:givenName>Andrzej K.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pagès</foaf:surname>
+                        <foaf:givenName>Hervé</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Reyes</foaf:surname>
+                        <foaf:givenName>Alejandro</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Shannon</foaf:surname>
+                        <foaf:givenName>Paul</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Smyth</foaf:surname>
+                        <foaf:givenName>Gordon K.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Tenenbaum</foaf:surname>
+                        <foaf:givenName>Dan</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Waldron</foaf:surname>
+                        <foaf:givenName>Levi</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Morgan</foaf:surname>
+                        <foaf:givenName>Martin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_51"/>
+        <link:link rdf:resource="#item_50"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Gene Expression Profiling</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Genomics</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Software</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Computational Biology</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Programming Languages</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>High-Throughput Screening Assays</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>User-Computer Interface</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Orchestrating high-throughput genomic analysis with Bioconductor</dc:title>
+        <dcterms:abstract>Bioconductor is an open-source, open-development software project for the analysis and comprehension of high-throughput data in genomics and molecular biology. The project aims to enable interdisciplinary research, collaboration and rapid development of scientific software. Based on the statistical programming language R, Bioconductor comprises 934 interoperable packages contributed by a large, diverse community of scientists. Packages cover a range of bioinformatic and statistical applications. They undergo formal initial review and continuous automated testing. We present an overview for prospective users and contributors.</dcterms:abstract>
+        <dc:date>2015-02</dc:date>
+        <z:language>eng</z:language>
+        <z:libraryCatalog>PubMed</z:libraryCatalog>
+        <dc:description>PMID: 25633503
+PMCID: PMC4509590</dc:description>
+        <bib:pages>115-121</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1548-7105">
+        <prism:volume>12</prism:volume>
+        <dc:title>Nature Methods</dc:title>
+        <dc:identifier>DOI 10.1038/nmeth.3252</dc:identifier>
+        <prism:number>2</prism:number>
+        <dcterms:alternative>Nat Methods</dcterms:alternative>
+        <dc:identifier>ISSN 1548-7105</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_51">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/51/Huber et al. - 2015 - Orchestrating high-throughput genomic analysis wit.pdf"/>
+        <dc:title>Accepted Version</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://europepmc.org/articles/pmc4509590?pdf=render</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-17 05:34:36</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_50">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PubMed entry</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://www.ncbi.nlm.nih.gov/pubmed/25633503</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-17 05:34:33</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_52">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>9 (ELIXIR)</prism:volume>
+                <dc:title>F1000Research</dc:title>
+                <prism:number>709</prism:number>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kolberg</foaf:surname>
+                        <foaf:givenName>Liis</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Raudvere</foaf:surname>
+                        <foaf:givenName>Uku</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kuzmin</foaf:surname>
+                        <foaf:givenName>Ivan</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Vilo</foaf:surname>
+                        <foaf:givenName>Jaak</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Peterson</foaf:surname>
+                        <foaf:givenName>Hedi</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_53"/>
+        <dc:title>gprofiler2– an R package for gene list functional enrichment analysis and namespace conversion toolset g:Profiler</dc:title>
+        <dc:date>2020</dc:date>
+    </bib:Article>
+    <bib:Memo rdf:about="#item_53">
+       <rdf:value>R package version 0.2.2</rdf:value>
+    </bib:Memo>
+    <bib:Article rdf:about="#item_54">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:2046-1402"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kolberg</foaf:surname>
+                        <foaf:givenName>Liis</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Raudvere</foaf:surname>
+                        <foaf:givenName>Uku</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kuzmin</foaf:surname>
+                        <foaf:givenName>Ivan</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Vilo</foaf:surname>
+                        <foaf:givenName>Jaak</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Peterson</foaf:surname>
+                        <foaf:givenName>Hedi</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_56"/>
+        <link:link rdf:resource="#item_55"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Gene Expression Profiling</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Software</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Computational Biology</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>functional enrichment analysis</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>g:Profiler</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Gene Ontology</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>identifier mapping</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>pathways</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>R package</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:title>gprofiler2 -- an R package for gene list functional enrichment analysis and namespace conversion toolset g:Profiler</dc:title>
+        <dcterms:abstract>g:Profiler ( https://biit.cs.ut.ee/gprofiler) is a widely used gene list functional profiling and namespace conversion toolset that has been contributing to reproducible biological data analysis already since 2007. Here we introduce the accompanying R package, gprofiler2, developed to facilitate programmatic access to g:Profiler computations and databases via REST API. The gprofiler2 package provides an easy-to-use functionality that enables researchers to incorporate functional enrichment analysis into automated analysis pipelines written in R. The package also implements interactive visualisation methods to help to interpret the enrichment results and to illustrate them for publications. In addition, gprofiler2 gives access to the versatile gene/protein identifier conversion functionality in g:Profiler enabling to map between hundreds of different identifier types or orthologous species. The gprofiler2 package is freely available at the CRAN repository.</dcterms:abstract>
+        <dc:date>2020</dc:date>
+        <z:language>eng</z:language>
+        <z:shortTitle>gprofiler2 -- an R package for gene list functional enrichment analysis and namespace conversion toolset g</z:shortTitle>
+        <z:libraryCatalog>PubMed</z:libraryCatalog>
+        <dc:description>PMID: 33564394
+PMCID: PMC7859841</dc:description>
+        <bib:pages>ELIXIR-709</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:2046-1402">
+        <prism:volume>9</prism:volume>
+        <dc:title>F1000Research</dc:title>
+        <dc:identifier>DOI 10.12688/f1000research.24956.2</dc:identifier>
+        <dcterms:alternative>F1000Res</dcterms:alternative>
+        <dc:identifier>ISSN 2046-1402</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_56">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/56/Kolberg et al. - 2020 - gprofiler2 -- an R package for gene list functiona.pdf"/>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://f1000research.com/articles/9-709/v2/pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-19 22:56:37</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_55">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PubMed entry</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://www.ncbi.nlm.nih.gov/pubmed/33564394</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-19 22:56:34</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE212041">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>GEO Accession viewer</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE212041</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-01-20 00:00:26</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Collection rdf:about="#collection_1">
+        <dc:title>combine_covid</dc:title>
+        <dcterms:hasPart rdf:resource="#item_2"/>
+        <dcterms:hasPart rdf:resource="#item_5"/>
+        <dcterms:hasPart rdf:resource="#item_7"/>
+        <dcterms:hasPart rdf:resource="#item_10"/>
+        <dcterms:hasPart rdf:resource="#item_13"/>
+        <dcterms:hasPart rdf:resource="#item_21"/>
+        <dcterms:hasPart rdf:resource="#item_25"/>
+        <dcterms:hasPart rdf:resource="#item_29"/>
+        <dcterms:hasPart rdf:resource="#item_32"/>
+        <dcterms:hasPart rdf:resource="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE198449"/>
+        <dcterms:hasPart rdf:resource="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215865"/>
+        <dcterms:hasPart rdf:resource="#item_42"/>
+        <dcterms:hasPart rdf:resource="#item_45"/>
+        <dcterms:hasPart rdf:resource="#item_47"/>
+        <dcterms:hasPart rdf:resource="#item_49"/>
+        <dcterms:hasPart rdf:resource="#item_52"/>
+        <dcterms:hasPart rdf:resource="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE212041"/>
+    </z:Collection>
+</rdf:RDF>
