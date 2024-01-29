@@ -5,7 +5,7 @@ This repository contains R scripts (simple workflow files) that are sufficient t
 
 You will need to complete the individual analysis scripts first:
 
-GSE198449.R, GSE215865.R, acd ~/DOwnd GSE212041.R 
+GSE198449.R, GSE215865.R, and GSE212041.R 
 
 before you can successfully complete the final analysis script that combines the results into a single, statistically robust list of genes:
 
