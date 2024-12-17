@@ -16,6 +16,14 @@ library(readxl)
 library(tidyverse)
 library(gprofiler2)
 library(plotly)
+library(R.utils)
+library(ggplot2)
+library(tidyr)
+library(BiocManager)
+library(scatterplot3d)
+library(preprocessCore) # To install this package, library(BiocManager), BiocManager::install("preprocessCore")
+library(matlab) # To install this package, library(BiocManager), BiocManager::install("matlab")
+library(ecodist) # To install this package, library(BiocManager), BiocManager::install("ecodist")
 
 # Source all additional functions from Kevin's github repository ----------------------------------------------
 
@@ -31,7 +39,7 @@ source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/hea
 
 # Create a directory for working (if it doesn't already exist) and move to it --------
 # Specify the directory path
-dir_path <- "~/Downloads/GSE215865/"
+dir_path <- "~/GSE215865/"
 # Check if the directory exists
 if (dir.exists(dir_path)) {
   stop("Error: The directory already exists.")
@@ -53,44 +61,52 @@ local_file_path_data <- "GSE215865_rnaseq_raw_count_matrix.csv.gz"
 # Download the file
 download.file(data_url, destfile = local_file_path_data, mode = "wb")
 # Now we have to unzip the gz file, easiest to just do this with a system call
-system( paste("gunzip", local_file_path_data) )
+gunzip(local_file_path_data, remove = TRUE) # unzip the csv and remove the orignal gz file
+#system( paste("gunzip", local_file_path_data) )
 
 # Now the metadata ...
 # Go to this page:
 # https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215865
 # Click on the "SRA Run Selector" link close to the very bottom of the page
 # On the page you are taken to in the "Download" column of the "Select" section click on "Metadata" 
-# This will download "SraRunTable.txt", move it to this directory and you can proceed below
+# This will download "SraRunTable.txt", move it to this directory like this
+# Define the current path of the file
+current_path <- "C:/Users/[your_username]/Downloads/SraRunTable.csv"
+# Define the new path of the file
+new_path <- paste(dir_path, "SraRunTable_GSE215865.csv", sep = "")# rename the sra table with something less ambiguous 
+# Move (rename) the file
+file.rename(current_path, new_path)
 
 # Import and explore the data and the metadata -----------------------------------------
 
 # Import raw data and metadata
-GSE215865_metadata <- read_csv("SraRunTable.txt")
+GSE215865_metadata <- read_csv("SraRunTable_GSE215865.csv")
 GSE215865_data <- read_csv("GSE215865_rnaseq_raw_count_matrix.csv")
 
+# Get rid of any spaces in the rownames and colnames
+# -- they cause issues with automated file generation below
+colnames(GSE215865_metadata) <- gsub(pattern=" ", replacement = "_", x=colnames(GSE215865_metadata))
+rownames(GSE215865_metadata) <- gsub(pattern=" ", replacement = "_", x=rownames(GSE215865_metadata))
+colnames(GSE215865_data) <- gsub(pattern=" ", replacement = "_", x=colnames(GSE215865_data))
+rownames(GSE215865_data) <- gsub(pattern=" ", replacement = "_", x=rownames(GSE215865_data))
+
 # See how many samples there are at the start
-ncol(GSE215865_data) - 1 # 1392, first column has "Ensembl_Gene_ID" 
+ncol(GSE215865_data) - 1 # 1392, first column has "Ensembl_Gene_ID"
 
 # Look at sample ids in the data
 colnames(GSE215865_data)[1:3] #  They look like this in the data: "Subj_16ae238fT0_Plate_2"
 length(colnames(GSE215865_data)) # 1393, a column for the Ensembl Gene IDs followed by 1392 samples
 
 # Reconstruct sample ID in metadata that matches those found in colnames of the data
-GSE215865_metadata$blood_sample_id[1] # "Subj_5d362febT1"
-GSE215865_metadata$library_prep_plate[1] # "Plate_8"
-paste( GSE215865_metadata$blood_sample_id[1], GSE215865_metadata$library_prep_plate[1], sep="_" ) # "Subj_5d362febT1_Plate_8"
-# Check to make sure this reconstructed sample name is actually in the data
-"Subj_5d362febT1_Plate_8" %in% colnames(GSE215865_data) # TRUE
-# Now add a column with the reconstructed sample ID to the metadata
-length(colnames(GSE215865_metadata))
+# Add a column with the reconstructed sample ID to the metadata
+length(colnames(GSE215865_metadata)) # 39
 GSE215865_metadata <- GSE215865_metadata |>
   mutate( GSE215865_sample_id = paste( blood_sample_id, library_prep_plate, sep = "_") )
 length(colnames(GSE215865_metadata))   # we added a 40th column to the metadata
 
 # Try to get IDs to match between the data and metadata, cull each accordingly ------------------------
-  
-# Find samples that are in common between data and metadata
-common_samples <- intersect( GSE215865_metadata$GSE215865_sample_id, colnames(GSE215865_data) )
+metadata_ids <- GSE215865_metadata %>% pull("GSE215865_sample_id")
+common_samples <- intersect( metadata_ids, colnames(GSE215865_data) )
 common_samples <- sort(common_samples)
 length(common_samples) # 1391
 common_samples[1:3] # take a look at the first three sample IDs
@@ -115,11 +131,12 @@ dim(GSE215865_selected_data) # 58929  1392
 GSE215865_selected_data <- column_to_rownames(GSE215865_selected_data, var="Ensembl_Gene_ID")
 dim(GSE215865_selected_data) # 58929  1391
 
-# SAVE THE DATA AND THE METADATA TO FILE (First attempt) ----------------------------------
+# SAVE THE DATA AND THE METADATA TO FILE ----------------------------------
 # Now save the metadata to file
 export_data(data_object = GSE215865_selected_metadata, file_name = "GSE215865.metadata.txt")
-# Write the data to file
 export_data(data_object = GSE215865_selected_data, file_name = "GSE215865.data.txt")
+# alternatively # write.table(GSE215865_metadata, file="GSE215865.metadata.txt", sep="\t", col.names = NA, row.names = TRUE, quote = FALSE, eol="\n")# Write the metadata to file
+# alternatively # write.table(GSE215865_selected_data, file="GSE215865.data.txt", sep="\t", col.names = NA, row.names = TRUE, quote = FALSE, eol="\n")# Write the data to file (may take a minute)
 
 # Check that subselecting "worked" ----------------------------------------
 
@@ -139,9 +156,9 @@ GSE215865_data <- GSE215865_data[,ordered_sample_names]
 # Order the metadata rows by this index
 GSE215865_metadata <- GSE215865_metadata[ordered_sample_names,]
 # Check for identity once again
-identical( colnames(GSE215865_data), rownames(GSE215865_metadata) ) # TRUE
+identical( colnames(GSE215865_data), rownames(GSE215865_metadata) ) # TRUE, samples are now identically ordered
 
-# SAVE THE DATA AND THE METADATA TO FILE (Second attempt) ----------------------------------
+# SAVE THE DATA AND THE METADATA TO FILE ----------------------------------
 export_data(data_object = GSE215865_data, file_name = "GSE215865.data.txt")
 export_data(data_object = GSE215865_metadata, file_name = "GSE215865.metadata.txt")
 
@@ -161,16 +178,18 @@ GSE215865_data <- import_data("GSE215865.data.txt")
 GSE215865_metadata <- import_metadata("GSE215865.metadata.txt")
 
 # Look at distribution of raw data ----------------------------------------
-
-# Explore distribution of data
+# Explore distribution of data with histograms
 all_GSE215865_data <- as.vector(GSE215865_data)
 hist(all_GSE215865_data, breaks =100)
 hist(log10(all_GSE215865_data), breaks =100) # not really, but almost log normal
 # with ggplot
 all_GSE215865_data <- data.frame(Values = as.vector(GSE215865_data))
-ggplot(data=all_GSE215865_data,
-       mapping=aes(x=Values))+
-       geom_histogram()
+ggplot(data=all_GSE215865_data,mapping=aes(x=Values))+
+  geom_histogram(bins = 100, fill = "purple", color = "black") +
+  scale_x_log10() +
+  labs(title = "Histogram of expression values",
+       x = "Log-Transformed Values",
+       y = "Frequency")
 
 # Look at the distribution of summary values in the raw data
 GSE215865_raw_mean <- apply(GSE215865_data, 2, mean) 
@@ -253,8 +272,18 @@ plot_static_colored_3d_pcoas(
   selected_eigen_vectors = c(1,2,3),
   metadata_filename = "GSE215865.metadata.txt",
   debug = TRUE
-)
-system("open *.PCoA.*.png")
+) # This may take a few minutes to compute.
+# Open all of the the generataed PCoA images.
+# system("open *.PCoA.*.png") # prior to windows 11 this worked, 
+# with windows 11
+# something like this - please let me know if you find a different approach
+my_pngs <- dir(pattern = ".*\\.png$")
+for (i in my_pngs){
+  my_command <- paste("start", i, sep=)
+  print(my_command)
+  shell(my_command)
+}
+
 # Some of the outlier samples give the PCoA an unusual appearance.
 # Some correlation between the distribution of the points and "covid-19_positive"
 # Also some correlation to "patient_classification_at_first_sample"
@@ -300,8 +329,8 @@ dim(GSE215865_vectors_filtered) # 1358 1392, 33 rows/samples were removed
 boxplot( GSE215865_vectors_filtered[,2:4] ) # still a large number of outliers
 # Take a look at the distribution of values in the individual vectors
 hist( as.numeric(GSE215865_vectors_filtered[,2]) ) # less than -2 appear to be outliers
-hist( as.numeric(GSE215865_vectors_filtered[,3]) ) # less than -5 outliers interesting that this vector exhibits a normal distribution when the others do not
-hist( as.numeric(GSE215865_vectors_filtered[,4]) ) # less than -4 outlier
+hist( as.numeric(GSE215865_vectors_filtered[,3]) ) # less than -5 and above 5 appear to be outliers
+hist( as.numeric(GSE215865_vectors_filtered[,4]) ) #
 
 # Create an interactive plot of the filtered vector values
 plot_ly(
@@ -315,9 +344,8 @@ plot_ly(
 # Get rid of quotes in the rownames
 GSE215865_vectors_filtered$GSE215865_rownames <- str_replace_all(GSE215865_vectors_filtered$GSE215865_rownames, '"', '')
 # See how many samples were culled
-length(intersect( GSE215865_vectors_filtered$GSE215865_rownames, GSE215865_vectors$GSE215865_rownames ))
-length(setdiff( GSE215865_vectors$GSE215865_rownames, GSE215865_vectors_filtered$GSE215865_rownames ))
-# Lost just 33 samples
+length(intersect( GSE215865_vectors_filtered$GSE215865_rownames, GSE215865_vectors$GSE215865_rownames )) # 1358
+length(setdiff( GSE215865_vectors$GSE215865_rownames, GSE215865_vectors_filtered$GSE215865_rownames )) # Lost just 33 samples
 
 # The data may have some horseshoe artifact, try another PCoA with Bray-Curtis distance 
 # Call function without args to see available distance options
@@ -388,7 +416,7 @@ GSE215865_stat_results_subselected <- column_to_rownames(GSE215865_stat_results_
 
 # Export results with stats
 export_data(data_object = GSE215865_stat_results_subselected, file_name = "GSE215865_stat_results_subselected.txt")
-# Remove the columns that contain the stats(this is hacky)
+# Remove the columns that contain the stats
 GSE215865_stat_results_subselected_and_cleaned <- remove_last_n_columns(GSE215865_stat_results_subselected, n=7)
 # Export the data ready to create a HD
 export_data(data_object = GSE215865_stat_results_subselected_and_cleaned, file_name = "GSE215865_stat_results_subselected_and_cleaned.txt")
@@ -400,7 +428,7 @@ export_data(data_object = GSE215865_stat_results_subselected_and_cleaned, file_n
 # in the column name that R did not directly complain about. Per note below
 # removed all of the potentially offending characters and it worked
 # from https://github.com/Teichlab/cellphonedb/issues/219
-# "I replaced the symbols(/-_ et al) with dot(.) in cell/cluster names, and then the heatmap plot function works again. May it can help you."
+# "I replaced the symbols(/-_ et al) with dot(.) in cell/cluster names, and then the heatmap plot function works again. Maybe it can help you."
 GSE215865_metadata <- import_metadata("GSE215865.metadata.txt")
 # We replace the existing column names with syntactically correct ones like this
 colnames(GSE215865_metadata) <- make.names(colnames(GSE215865_metadata))
@@ -422,8 +450,10 @@ heatmap_dendrogram(file_in = "GSE215865_stat_results_subselected_and_cleaned.txt
                    metadata_table = "GSE215865.metadata.txt",
                    metadata_column="covid.19_positive"
 )
-# This worked fine on my local machine
-system("open GSE215865_stat_results_subselected_and_cleaned.txt.HD.png")
+# This worked fine on my local machine prior to windows 11
+# system("open GSE215865_stat_results_subselected_and_cleaned.txt.HD.png")
+# Under windows 11 this seems to work 
+shell("start GSE215865_stat_results_subselected_and_cleaned.txt.HD.png")
 
 # Calculate a PCoA for the statistically subselected data
 calculate_pco("GSE215865_stat_results_subselected_and_cleaned.txt")
@@ -451,8 +481,15 @@ plot_interactive_colored_3d_pcoa(
 # Click on "Go"
 # This will download a file called "mart_export.txt" that we use below
 # I assume that you move "mart_export.txt" to this directory before proceeding
+# Define the current path of the file
+current_path <- "C:/Users/[your_username]/Downloads/"
+# Define the new path of the file
+new_path <- paste(dir_path, "mart_export.txt", sep = "")#
+# Move (rename) the file
+file.rename(current_path, new_path)
+
 # The goal here is to add two columns to the stat results that contain the 
-# gene name and gene descirption for each ENSG id 
+# gene name and gene description for each ENSG id 
 annotations <- read.table(file="mart_export.txt",row.names=NULL,header=TRUE,sep="\t", # compared to import_data, changed row.names from 1 to NULL
                           colClasses = "character", check.names=FALSE,
                           comment.char = "",quote="",fill=TRUE,blank.lines.skip=FALSE)
@@ -462,7 +499,7 @@ GSE215865_stat_results_subselected <- import_data("GSE215865_stat_results_subsel
 # Remove the version tag and you can match to the Gene stable ID
 GSE215865_genes <- rownames(GSE215865_stat_results_subselected)
 GSE215865_genes[1]
-GSE215865_genes <- gsub(pattern="\\..*", replacement = "", x=GSE215865_genes) # have a .num tag, part of the stable ID version
+GSE215865_genes <- gsub(pattern="\\..*", replacement = "", x=GSE215865_genes) # have a .num tag, part of the stable ID version, we remove it here
 GSE215865_genes[1]
 
 # add columns for the annotation information, NA to start
@@ -476,6 +513,7 @@ for ( i in 1:length(GSE215865_genes)){
   GSE215865_stat_results_subselected[i,"gene_names"] <- GSE215865_gene_annotation[1,"Gene name"]
   GSE215865_stat_results_subselected[i,"gene_descriptions"] <- GSE215865_gene_annotation[1,"Gene description"]
 }
+# Now export the annotated results
 export_data(data_object = GSE215865_stat_results_subselected, file_name = "GSE215865.annotations.txt")
 
 # PRELIMINARY PATHWAY ANALYSIS --------------------------------------------
@@ -486,6 +524,8 @@ GSE215865_genes
 # Perform pathway analysis and generate an interactive visualization
 gostres <- gost(query = GSE215865_genes, organism = 'hsapiens', significant = FALSE)
 gostplot(gostres, capped = TRUE, interactive = TRUE)
+
+# That's it for this analysis
 
 # JUNK BELOW HERE ---------------------------------------------------------
 # JUNK BELOW HERE ---------------------------------------------------------
