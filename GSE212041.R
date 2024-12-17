@@ -17,6 +17,7 @@ library(tidyverse)
 library(gprofiler2)
 library(plotly)
 library(RCurl)
+library(R.utils)
 
 # Source all additional functions from Kevin's github repository ----------------------------------------------
 
@@ -32,7 +33,7 @@ source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/hea
 
 # Create a directory for working (if it doesn't already exist) and move to it --------
 # Specify the directory path
-dir_path <- "~/Downloads/GSE212041/"
+dir_path <- "~/GSE212041/"
 # Check if the directory exists
 if (dir.exists(dir_path)) {
   stop("Error: The directory already exists.")
@@ -54,7 +55,7 @@ local_file_path_data <- "GSE212041_Neutrophil_RNAseq_TPM_Matrix.txt.gz"
 # Download the file
 download.file(data_url, destfile = local_file_path_data, mode = "wb")
 # Now we have to unzip the gz file, easiest to just do this with a system call
-system( paste("gunzip", local_file_path_data) )
+gunzip(local_file_path_data, remove = TRUE) # unzip the csv and remove the orignal gz file
 
 # Now the metadata ...
 # Metadata for this dataset had to be collected from multiple accession pages.
@@ -70,9 +71,14 @@ system( paste("gunzip", local_file_path_data) )
 # Now click on the "Export" button
 # This will download a file called "sample.csv" that contains the accession numbers for 781 samples
 # Move that file into this directory and proceed below.
+current_path <- "C:/Users/[your_username]/Downloads/sample.csv"
+# Define the new path of the file
+new_path <- paste(dir_path, "sample_GSE212041.csv", sep = "")# rename the sample table with something less ambiguous 
+# Move (rename) the file
+file.rename(current_path, new_path)
 
 # Load file that has sample accession information
-GSE212041_metadata <- read_csv("sample.csv")
+GSE212041_metadata <- read_csv("sample_GSE212041.csv")
 
 # add columns to the existing metadata to accept new values that will be collected from the accession sites
 GSE212041_metadata <- GSE212041_metadata |>
@@ -186,9 +192,12 @@ hist(all_GSE212041_data, breaks =100)
 hist(log10(all_GSE212041_data), breaks =100) # The data appear to be roughly log normal
 # Look at with ggplot
 all_GSE212041_data <- data.frame(Values = as.vector(GSE212041_data))
-ggplot(data=all_GSE212041_data,
-       mapping=aes(x=Values))+
-       geom_histogram()
+ggplot(data=all_GSE212041_data,mapping=aes(x=Values))+
+  geom_histogram(bins = 100, fill = "purple", color = "black") +
+  scale_x_log10() +
+  labs(title = "Histogram of expression values",
+  x = "Log-Transformed Values",
+  y = "Frequency")
 
 # Look at the distribution of summary values in the raw data
 GSE212041_raw_mean <- apply(GSE212041_data, 2, mean) 

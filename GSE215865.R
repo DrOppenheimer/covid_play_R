@@ -62,7 +62,6 @@ local_file_path_data <- "GSE215865_rnaseq_raw_count_matrix.csv.gz"
 download.file(data_url, destfile = local_file_path_data, mode = "wb")
 # Now we have to unzip the gz file, easiest to just do this with a system call
 gunzip(local_file_path_data, remove = TRUE) # unzip the csv and remove the orignal gz file
-#system( paste("gunzip", local_file_path_data) )
 
 # Now the metadata ...
 # Go to this page:
@@ -184,7 +183,7 @@ hist(all_GSE215865_data, breaks =100)
 hist(log10(all_GSE215865_data), breaks =100) # not really, but almost log normal
 # with ggplot
 all_GSE215865_data <- data.frame(Values = as.vector(GSE215865_data))
-ggplot(data=all_GSE215865_data,mapping=aes(x=Values))+
+ggplot(data=all_GSE215865_data,mapping=aes(x=Values)) +
   geom_histogram(bins = 100, fill = "purple", color = "black") +
   scale_x_log10() +
   labs(title = "Histogram of expression values",
