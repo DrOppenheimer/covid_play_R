@@ -498,7 +498,16 @@ plot_static_colored_3d_pcoas(
   metadata_filename = "GSE198449.metadata.edit.txt",
   debug = TRUE
 )
-system("open *.PCoA.*.png")
+# Open all of the the generataed PCoA images.
+# system("open *.PCoA.*.png") # prior to windows 11 this worked, 
+# with windows 11
+# something like this - please let me know if you find a different approach
+my_pngs <- dir(pattern = ".*\\.png$")
+for (i in my_pngs){
+  my_command <- paste("start", i, sep=)
+  print(my_command)
+  shell(my_command)
+}
 # There is some pattern with respect to "plate", interpret as batch effect
 # and also to "sample.collection.time point.days.since.TO.", interpret the latter 
 # as a biological signal. "biocollection.ID", "enrollment.batch", "participant.ID", and
@@ -547,7 +556,7 @@ export_data(data_object = GSE198449_stat_results_subselected, file_name = "GSE19
 # remove the columns that contain the stats(this is hacky)
 GSE198449_stat_results_subselected_and_cleaned <- remove_last_n_columns(GSE198449_stat_results_subselected, n=7)
 # make sure that samples are sorted/ordered as they are in the metadata above 
-length(GSE198449_ordered_sample_names)
+length(GSE198449_ordered_sample_names) # 507
 
 # Export the data ready to create a new PCoA or HD
 export_data(data_object = GSE198449_stat_results_subselected_and_cleaned, file_name = "GSE198449_stat_results_subselected_and_cleaned.txt")
@@ -571,16 +580,16 @@ plot_interactive_colored_3d_pcoa(
 heatmap_dendrogram(file_in = "GSE198449.data.edit.txt.quantile.PREPROCESSED.txt",
                    metadata_table = "GSE198449.metadata.edit.txt",
                    metadata_column="PCR.test.for.SARS.Cov.2"
-) # This operation may fail, the image is complex an requires a lot of resources
+) # This operation may fail, the image is complex and requires a lot of resources
 # It also takes a considerable amount of time, almost an hour on my laptop.
-system("open GSE198449.data.edit.txt.quantile.PREPROCESSED.txt.HD.png")
+shell("start GSE198449.data.edit.txt.quantile.PREPROCESSED.txt.HD.png")
 
 # Now just the statistically subselected data - this is much quicker.
 heatmap_dendrogram(file_in = "GSE198449_stat_results_subselected_and_cleaned.txt",
                    metadata_table = "GSE198449.metadata.edit.txt",
                    metadata_column="PCR.test.for.SARS.Cov.2"
 )
-system("open GSE198449_stat_results_subselected_and_cleaned.txt.HD.png")
+shell("start GSE198449_stat_results_subselected_and_cleaned.txt.HD.png")
 
 # ANNOTATE RESULTS --------------------------------------------------------
 
@@ -631,6 +640,9 @@ GSE198449_genes
 # Perform pathway analysis and generate an interactive visualization
 gostres <- gost(query = GSE198449_genes, organism = 'hsapiens', significant = FALSE)
 gostplot(gostres, capped = TRUE, interactive = TRUE)
+
+# That's it for the analysis of GSE212041.
+# Continue on to one of the other three datasets and combine_covid when you're done with all three
 
 # JUNK BELOW HERE ---------------------------------------------------------
 # JUNK BELOW HERE ---------------------------------------------------------

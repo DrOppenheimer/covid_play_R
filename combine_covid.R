@@ -17,7 +17,7 @@ source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/hea
 
 # Create a directory for working (if it doesn't already exist) and move to it --------
 # Specify the directory path
-dir_path <- "~/Downloads/TEST/combine_covid/"
+dir_path <- "~/combine_covid/"
 # Check if the directory exists
 if (dir.exists(dir_path)) {
   stop("Error: The directory already exists.")
@@ -35,7 +35,7 @@ setwd(dir_path)
 
 # GSE198449
 # Import the statistically subselected data with stats removed
-GSE198449_stat <- import_data("~/Downloads/TEST/GSE198449/GSE198449_stat_results_subselected_and_cleaned.txt")
+GSE198449_stat <- import_data("~/GSE198449/GSE198449_stat_results_subselected_and_cleaned.txt")
 # The rownames of this dataset contain the ENSG stable gene IDs along with a version tag. The tag is removed
 # to allow for comparison of just the stable gene ID
 rownames(GSE198449_stat) <- gsub(pattern="\\..*", replacement = "", x=rownames(GSE198449_stat))
@@ -43,7 +43,7 @@ ncol(GSE198449_stat) # i.e., 506 samples
 
 # GSE215865
 # Import the statistically subselected data with stats removed
-GSE215865_stat <- import_data("~/Downloads/TEST/GSE215865/GSE215865_stat_results_subselected_and_cleaned.txt")
+GSE215865_stat <- import_data("~/GSE215865/GSE215865_stat_results_subselected_and_cleaned.txt")
 # The rownames of this dataset contain the ENSG stable gene IDs along with a version tag. The tag is removed
 # to allow for comparison of just the stable gene ID
 rownames(GSE215865_stat) <- gsub(pattern="\\..*", replacement = "", x=rownames(GSE215865_stat))
@@ -51,7 +51,7 @@ ncol(GSE215865_stat) # i.e., 1391 samples
 
 # GSE212041
 # Import the statistically subselected data with stats removed
-GSE212041_stat <- import_data("~/Downloads/TEST/GSE212041/GSE212041_stat_results_subselected_and_cleaned.txt")
+GSE212041_stat <- import_data("~/GSE212041/GSE212041_stat_results_subselected_and_cleaned.txt")
 # The rownames of this dataset contain the ENSG stable gene ID WITHOUT a version tag. No modification
 # necessary.
 ncol(GSE212041_stat) # i.e., 781 samples
@@ -69,7 +69,7 @@ length(all_three) # 61
 # from https://useast.ensembl.org/biomart/martview/ We use that annotation file again here
 # You may have to change the path of the file below.
 # Load the annotations downloaded in the analysis of GSE198449
-annotations <- read.table(file="~/Downloads/TEST/GSE198449/mart_export.txt",row.names=NULL,header=TRUE,sep="\t", #changed row.names from 1 to NULL
+annotations <- read.table(file="~/GSE198449/mart_export.txt",row.names=NULL,header=TRUE,sep="\t", #changed row.names from 1 to NULL
                           colClasses = "character", check.names=FALSE,
                           comment.char = "",quote="",fill=TRUE,blank.lines.skip=FALSE)
 
@@ -107,7 +107,7 @@ my_results <- rbind(my_results, c("ENSG00000234290", NA, NA))
 # Write the mostly annotated list of genes to file
 write.table(file = "In_common.txt", x = my_results, sep="\t",  quote=FALSE, col.names=TRUE, row.names=FALSE)
 
-# Heatmap-Dendrograms of the selected genes across all three datas --------
+# Heatmap-Dendrograms of the selected genes across all three datasets --------
 
 # The data from each of the datasets is subselected to just the genes found in common
 # Those data are saved and used to create heatmap-dendrograms
@@ -116,7 +116,7 @@ GSE198449_stat_all_three <- GSE198449_stat[all_three,]
 # make sure that data colnames and metadata rownames are the same  
 GSE198449_sorted_samples <- sort(colnames(GSE198449_stat_all_three))
 GSE198449_stat_all_three <- GSE198449_stat_all_three[,GSE198449_sorted_samples]
-GSE198449_metadata <- import_metadata("~/Downloads/TEST/GSE198449/GSE198449.metadata.txt")
+GSE198449_metadata <- import_metadata("~/GSE198449/GSE198449.metadata.txt")
 GSE198449_metadata <- GSE198449_metadata[GSE198449_sorted_samples,]
 # Export sorted data
 export_data(GSE198449_stat_all_three, "GSE198449_stat_all_three.txt")
@@ -127,14 +127,14 @@ heatmap_dendrogram(file_in = "GSE198449_stat_all_three.txt",
                    metadata_table = "GSE198449.metadata.txt",
                    metadata_column="PCR.test.for.SARS.Cov.2"
 )
-system("open GSE198449_stat_all_three.txt.HD.png")
+shell("start GSE198449_stat_all_three.txt.HD.png")
 
 # Now GSE215865
 GSE215865_stat_all_three <- GSE215865_stat[all_three,]
 # make sure that data colnames and metadata rownames are the same  
 GSE215865_sorted_samples <- sort(colnames(GSE215865_stat_all_three))
 GSE215865_stat_all_three <- GSE215865_stat_all_three[,GSE215865_sorted_samples]
-GSE215865_metadata <- import_metadata("~/Downloads/TEST/GSE215865/GSE215865.metadata.txt")
+GSE215865_metadata <- import_metadata("~/GSE215865/GSE215865.metadata.txt")
 GSE215865_metadata <- GSE215865_metadata[GSE215865_sorted_samples,]
 # export sorted data
 export_data(GSE215865_stat_all_three, "GSE215865_stat_all_three.txt")
@@ -145,14 +145,14 @@ heatmap_dendrogram(file_in = "GSE215865_stat_all_three.txt",
                    metadata_table = "GSE215865.metadata.txt",
                    metadata_column="covid.19_positive"
 )
-system("open GSE215865_stat_all_three.txt.HD.png")
+shell("start GSE215865_stat_all_three.txt.HD.png")
 
 # Now GSE212041
 GSE212041_stat_all_three <- GSE212041_stat[all_three,]
 # make sure that data colnames and metadata rownames are the same  
 GSE212041_sorted_samples <- sort(colnames(GSE212041_stat_all_three))
 GSE212041_stat_all_three <- GSE212041_stat_all_three[,GSE212041_sorted_samples]
-GSE212041_metadata <- import_metadata("~/Downloads/TEST/GSE212041/GSE212041.metadata.txt")
+GSE212041_metadata <- import_metadata("~/GSE212041/GSE212041.metadata.txt")
 GSE212041_metadata <- GSE212041_metadata[GSE212041_sorted_samples,]
 # export sorted data
 export_data(GSE212041_stat_all_three, "GSE212041_stat_all_three.txt")
@@ -163,7 +163,7 @@ heatmap_dendrogram(file_in = "GSE212041_stat_all_three.txt",
                    metadata_table = "GSE212041.metadata.txt",
                    metadata_column="patient_category"
 )
-system("open GSE212041_stat_all_three.txt.HD.png")
+shell ("start GSE212041_stat_all_three.txt.HD.png")
 
 # PRELIMINARY PATHWAY ANALYSIS --------------------------------------------
 
@@ -173,3 +173,6 @@ all_three
 # Use the gprofiler2 package to perform preliminary pathway analysis
 gostres <- gost(query = all_three, organism = 'hsapiens', significant = TRUE)
 gostplot(gostres, capped = FALSE, interactive = TRUE)
+
+# That's it for now. I hope you have enjoyed and/or learned something new from this
+# basement project. Cheers, Kevin K 
