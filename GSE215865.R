@@ -524,7 +524,8 @@ GSE215865_genes
 gostres <- gost(query = GSE215865_genes, organism = 'hsapiens', significant = FALSE)
 gostplot(gostres, capped = TRUE, interactive = TRUE)
 
-# That's it for this analysis
+# That's it for this analysis.
+# Continue on to one of the other three datasets and combine_covid when you're done with all three
 
 # JUNK BELOW HERE ---------------------------------------------------------
 # JUNK BELOW HERE ---------------------------------------------------------

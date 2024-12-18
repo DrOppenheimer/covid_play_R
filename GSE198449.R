@@ -17,6 +17,7 @@ library(readxl)
 library(tidyverse)
 library(gprofiler2)
 library(plotly)
+library(R.utils)
 
 # Source all additional functions from Kevin's github repository ----------------------------------------------
 
@@ -32,7 +33,7 @@ source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/hea
 
 # Create a directory for working (if it doesn't already exist) and move to it --------
 # Specify the directory path
-dir_path <- "~/Downloads/GSE198449/"
+dir_path <- "~/GSE198449/"
 # Check if the directory exists
 if (dir.exists(dir_path)) {
   stop("Error: The directory already exists.")
@@ -54,7 +55,7 @@ local_file_path_data <- "GSE198449_featureCounts.txt.gz"
 # Download the file
 download.file(data_url, destfile = local_file_path_data, mode = "wb")
 # now we have to unzip the gz file, easiest to just do this with a system call
-system( paste("gunzip", local_file_path_data) )
+gunzip(local_file_path_data, remove = TRUE) # unzip the file and remove the orignal gz file
 
 # Now the metadata
 metadata_url <- "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE198nnn/GSE198449/suppl/GSE198449_PCR_and_Symptoms_Full_Info.xlsx"
@@ -312,7 +313,7 @@ identical_sample_names # TRUE, Now it seems ok
 export_data(data_object = GSE198449_data, file_name = "GSE198449.data.txt" )
 export_data(data_object = GSE198449_metadata, file_name ="GSE198449.metadata.txt"  )
 
-# re-open data and meta data and make sure that each is sorted by the id
+# re-open data and metadata and make sure that each is sorted by the id
 ##source("~/Documents/GitHub/workflow_play/import_metadata.r")
 GSE198449_data2 <- import_data("GSE198449.data.txt")
 GSE198449_metadata2 <- import_metadata("GSE198449.metadata.txt")
@@ -348,9 +349,12 @@ hist(all_GSE198449_data, breaks =100)
 hist(log10(all_GSE198449_data), breaks =100) # is roughly log normal
 # with ggplot
 all_GSE198449_data <- data.frame(Values = as.vector(GSE198449_data))
-ggplot(data=all_GSE198449_data,
-       mapping=aes(x=Values))+
-       geom_histogram()
+ggplot(data=all_GSE198449_data,mapping=aes(x=Values)) +
+  geom_histogram(bins = 100, fill = "purple", color = "black") +
+  scale_x_log10() +
+  labs(title = "Histogram of expression values",
+       x = "Log-Transformed Values",
+       y = "Frequency")
 
 # look at the distribution of summary values in the raw data
 GSE198449_raw_mean <- apply(GSE198449_data, 2, mean)
@@ -405,7 +409,7 @@ ggplot(
   geom_point(aes(y=GSE198449_max, colour="GSE198449_max")) +
   geom_point(aes(y=GSE198449_sd, colour="GSE198449_sd")) +
   scale_color_manual(name = "Stat Values", values = c("GSE198449_mean" = "black", "GSE198449_median" = "red", "GSE198449_min"="blue", "GSE198449_max"="green", "GSE198449_sd"="purple"))
-# In both vizualizations there appears to be at least one extreme oulier, around index 30
+# In both visualizations there appears to be at least one extreme outlier, around index 30
 
 # Find row indices where Value is larger than 4e+06 - this is the extreme outlier
 row_indices <- which(GSE198449_raw_descriptive_stats$GSE198449_max > 4e+06) # 37
@@ -430,7 +434,7 @@ ggplot(
 # Things look pretty good once this one outlier sample is removed, so I will remove it 
 # from the data and metadata before further analysis
 
-# Remove the column named of the outlier
+# Remove the outlier
 GSE198449_data <- GSE198449_data[, !colnames(GSE198449_data) %in% "X20_5217.T00_P5"]
 GSE198449_metadata <- GSE198449_metadata[!rownames(GSE198449_metadata) %in% "X20_5217.T00_P5",]
 

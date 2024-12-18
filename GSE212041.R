@@ -55,7 +55,7 @@ local_file_path_data <- "GSE212041_Neutrophil_RNAseq_TPM_Matrix.txt.gz"
 # Download the file
 download.file(data_url, destfile = local_file_path_data, mode = "wb")
 # Now we have to unzip the gz file, easiest to just do this with a system call
-gunzip(local_file_path_data, remove = TRUE) # unzip the csv and remove the orignal gz file
+gunzip(local_file_path_data, remove = TRUE) # unzip the file and remove the orignal gz file
 
 # Now the metadata ...
 # Metadata for this dataset had to be collected from multiple accession pages.
@@ -278,7 +278,16 @@ plot_static_colored_3d_pcoas(
   metadata_filename = "GSE212041.metadata.txt",
   debug = TRUE
 )
-system("open *.PCoA.*.png")
+# Open all of the the generataed PCoA images.
+# system("open *.PCoA.*.png") # prior to windows 11 this worked, 
+# with windows 11
+# something like this - please let me know if you find a different approach
+my_pngs <- dir(pattern = ".*\\.png$")
+for (i in my_pngs){
+  my_command <- paste("start", i, sep=)
+  print(my_command)
+  shell(my_command)
+}
 # Clear horseshoe artifact. Correlations not obvious. Some pattern for "patient_category"
 # and "covid_status", but the separation is merky at best.
 
@@ -300,7 +309,7 @@ plot_interactive_colored_3d_pcoa(
 # "covid_status" is a boolean. Not completely sure what 0/1 represent, 
 # although I can guess based on overlap with "patient_category".
 # see unique(GSE212041_metadata[,"patient_category"]) vs unique(GSE212041_metadata[,"covid_status"])
-# There is a fairly obvious horseshoe artifact in the data. We try to addess this below by 
+# There is a fairly obvious horseshoe artifact in the data. We try to address this below by 
 # using another distance metric.
 
 # See if the horseshoe can be improved by changing the distance metric to Bray-Curtis
@@ -348,7 +357,7 @@ dim(GSE212041_stat_results) # 50811   788
 GSE212041_stat_results_subselected <- GSE212041_stat_results |> 
   rownames_to_column("GSE212041_rowname") |> # do this to retain the rownanes somewhere in the matrix
   filter( bonferroni_p < 0.1 ) # Bonferroni seems to be a little too stringent for this dataset
-dim(GSE212041_stat_results_subselected)
+dim(GSE212041_stat_results_subselected) #  994 789
 dim(GSE212041_stat_results_subselected)[1]/dim(GSE212041_stat_results)[1]*100 # find a value that retains 5% most significant
 # The parameters used retain just about 2% of the genes; however, I don't want to use a Bf that is any
 # less stringent. You can adjust this parameter or use the BH p or recalculate the stats with another
@@ -358,7 +367,7 @@ GSE212041_stat_results_subselected <- column_to_rownames(GSE212041_stat_results_
 
 # Export results with stats
 export_data(data_object = GSE212041_stat_results_subselected, file_name = "GSE212041_stat_results_subselected.txt")
-# Remove the columns that contain the stats(this is hacky)
+# Remove the columns that contain the stats
 GSE212041_stat_results_subselected_and_cleaned <- remove_last_n_columns(GSE212041_stat_results_subselected, n=7)
 # Export the data ready to create a HD
 export_data(data_object = GSE212041_stat_results_subselected_and_cleaned, file_name = "GSE212041_stat_results_subselected_and_cleaned.txt")
@@ -379,7 +388,8 @@ heatmap_dendrogram(file_in = "GSE212041_stat_results_subselected_and_cleaned.txt
                    metadata_table = "GSE212041.metadata.txt",
                    metadata_column="patient_category"
 )
-system("open GSE212041_stat_results_subselected_and_cleaned.txt.HD.png")
+# system("open GSE212041_stat_results_subselected_and_cleaned.txt.HD.png") # This worked prior to windows 11
+shell("start GSE212041_stat_results_subselected_and_cleaned.txt.HD.png") # This works under windows 11
 
 # Calculate and render a PCoA on the statistically subselected data
 calculate_pco(file_in="GSE212041_stat_results_subselected_and_cleaned.txt")
@@ -407,8 +417,15 @@ plot_interactive_colored_3d_pcoa(
 # Click on "Go"
 # This will download a file called "mart_export.txt" that we use below
 # I assume that you move "mart_export.txt" to this directory before proceeding
+# Define the current path of the file
+current_path <- "C:/Users/[your_username]/Downloads/"
+# Define the new path of the file
+new_path <- paste(dir_path, "mart_export.txt", sep = "")#
+# Move (rename) the file
+file.rename(current_path, new_path)
+
 # The goal here is to add two columns to the stat results that contain the 
-# gene name and gene descirption for each ENSG id 
+# gene name and gene description for each ENSG id 
 annotations <- read.table(file="mart_export.txt",row.names=NULL,header=TRUE,sep="\t", # compared to import_data, changed row.names from 1 to NULL
                           colClasses = "character", check.names=FALSE,
                           comment.char = "",quote="",fill=TRUE,blank.lines.skip=FALSE)
@@ -441,6 +458,9 @@ GSE212041_genes
 # Perform pathway analysis and generate an interactive visualization
 gostres <- gost(query = GSE212041_genes, organism = 'hsapiens', significant = FALSE)
 gostplot(gostres, capped = TRUE, interactive = TRUE)
+
+# That's it for the analysis of GSE212041.
+# Continue on to one of the other three datasets and combine_covid when you're done with all three
 
 # JUNK BELOW HERE ---------------------------------------------------------
 # JUNK BELOW HERE ---------------------------------------------------------
