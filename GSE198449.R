@@ -658,17 +658,3 @@ GSE198449_metadata <- GSE198449_metadata[!rownames(GSE198449_metadata) %in% "X20
 # rownames with Tibble
 rownames_to_column(x,var="GSE198449_rowname") 
 column_to_rownames(x,var="GSE198449_rowname")
-
-# https://www.ncbi.nlm.nih.gov/geo/browse/?view=series&search=covid&display=20&zsort=samples
-# https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE198449
-# Submission date	Mar 11, 2022
-# Last update date	Jul 14, 2023
-# Contact name	Yongchao Ge
-# E-mail(s)	yongchao.ge@gmail.com
-# Organization name	Icahn School of Medicine at Mount Sinai
-# Department	Neurology
-# Street address	One Gustave L Levy Place #1137
-# City	New York
-# State/province	NY
-# ZIP/Postal code	10029
-# Country	USA

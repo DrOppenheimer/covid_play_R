@@ -530,18 +530,3 @@ gostplot(gostres, capped = TRUE, interactive = TRUE)
 # JUNK BELOW HERE ---------------------------------------------------------
 # JUNK BELOW HERE ---------------------------------------------------------
 # JUNK BELOW HERE ---------------------------------------------------------
-
-# https://www.ncbi.nlm.nih.gov/geo/browse/?view=series&search=covid&display=20&zsort=samples
-# https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215865
-# Submission date	Oct 16, 2022
-# Last update date	Feb 08, 2023
-# Contact name	Ryan Conrad Thompson
-# E-mail(s)	rct@thompsonclan.org
-# Organization name	Icahn School of Medicine at Mount Sinai
-# Department	Charles Bronfman Institute for Personalized Medicine
-# Lab	Beckmann Lab
-# Street address	1 Gustave L. Levy Place
-# City	New York
-# State/province	NY
-# ZIP/Postal code	10029-5674
-# Country	USA

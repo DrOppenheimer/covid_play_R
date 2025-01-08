@@ -466,21 +466,6 @@ gostplot(gostres, capped = TRUE, interactive = TRUE)
 # JUNK BELOW HERE ---------------------------------------------------------
 # JUNK BELOW HERE ---------------------------------------------------------
 
-# https://www.ncbi.nlm.nih.gov/geo/browse/?view=series&search=covid&display=20&zsort=samples
-# https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE212041
-# Submission date	Aug 25, 2022
-# Last update date	Oct 13, 2022
-# Contact name	Thomas James LaSalle
-# E-mail(s)	tlasalle@broadinstitute.org
-# Phone	856-470-8617
-# Organization name	Broad Institute
-# Lab	Hacohen Lab
-# Street address	415 Main Street
-# City	Cambridge
-# State/province	MA
-# ZIP/Postal code	02142
-# Country	USA
-
 # Use RCurl to collect metadata from accession sites
 # install.packages("RCurl")
 # library(RCurl)
