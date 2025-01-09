@@ -5,6 +5,7 @@
 # not, represent a robust list of candidate genes - suitable for further investigation. 
 
 # Load all required packages ----------------------------------------------
+# Note, Dependency installation on Ubuntu : sudo apt-get install libzmq3-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev build-essential libcurl4-openssl-dev libxml2-dev libssl-dev libfontconfig1-dev
 
 library(gprofiler2)
 

@@ -12,6 +12,7 @@
 # annotations from Ensembl. Directions to do this are below in the "Annotate Results" section
 
 # Load all required packages ----------------------------------------------
+# Note, Dependency installation on Ubuntu : sudo apt-get install libzmq3-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev build-essential libcurl4-openssl-dev libxml2-dev libssl-dev libfontconfig1-dev
 
 library(readxl)
 library(tidyverse)
