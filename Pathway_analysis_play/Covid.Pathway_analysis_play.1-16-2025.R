@@ -1,9 +1,9 @@
-# First, got to the directory that contains the 
-setwd("~/covid_play_R/Pathway_analysis_play/")
-
-
 # Additional pathway analysis
 # Adapted from https://bioconductor.org/packages/devel/bioc/vignettes/rWikiPathways/inst/doc/Pathway-Analysis.html
+
+# First, got to the directory that contains the 
+# You will have to edit this path for your system
+setwd("~/covid_play_R/Pathway_analysis_play/")
 
 # Install and load necessary packages
 if(!"rWikiPathways" %in% installed.packages()){
@@ -12,28 +12,30 @@ if(!"rWikiPathways" %in% installed.packages()){
   BiocManager::install("rWikiPathways", update = FALSE)
   BiocManager::install("clusterProfiler", update = FALSE)
   BiocManager::install("org.Hs.eg.db", update = FALSE)
+  install.packages("ggplot2")
 }
 library(rWikiPathways)
 library(clusterProfiler)
 library(org.Hs.eg.db)
 library(ggplot2)
 
-# Source script from Kevin's githib repository
+# Source a script from Kevin's githib repository
 source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/import_metadata.r")
 
 # Get the gene ids from Kevin's study that were found to be significantly deferentially expressed
 # among the three considered studies
 # First import the results table
-my_data <- import_metadata(group_table ="~/covid_play_R/manuscipt/Supplemental_Table_1.csv")
+# You will have to edit this line for your system setup
+my_data <- import_metadata(group_table ="~/Supplemental_Table_1.csv")
 # Then extract just the gene ids (Ensemble gene ids)
 my_genes <- as.character(rownames(my_data))
 
 # Convert Ensemble ids to Entrez
 my_genes.entrez <- clusterProfiler::bitr(my_genes,fromType = "ENSEMBL",toType = "ENTREZID",OrgDb = org.Hs.eg.db)
 cat("\n\nWhich column contains my new Entrez IDs?\n")
-head(up.genes.entrez)
+head(my_genes.entrez) # The second column
 
-# Get the gene Ontology
+# Get the gene Ontology # This will take a minute
 my_ont <- clusterProfiler::enrichGO(
   gene     = my_genes.entrez[[2]],
   #universe = NULL,
@@ -48,7 +50,7 @@ barplot(my_ont, showCategory = 20)
 dotplot(my_ont, showCategory = 20)
 goplot(my_ont)
 
-# with ggplot
+# barplot with ggplot
 ggplot(my_ont[1:20], aes(x=reorder(Description, -pvalue), y=Count, fill=-p.adjust)) +
   geom_bar(stat = "identity") +
   coord_flip() +
@@ -72,6 +74,7 @@ head(pathway_analysis)
 pathway_analysis <- DOSE::setReadable(pathway_analysis, org.Hs.eg.db, keyType = "ENTREZID")
 head(pathway_analysis)
 
+# Plot the results
 barplot(pathway_analysis, showCategory = 20)
 # with ggplot
 ggplot(pathway_analysis[1:20], aes(x=reorder(Description, -pvalue), y=Count, fill=-p.adjust)) +
