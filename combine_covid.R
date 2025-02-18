@@ -196,7 +196,7 @@ library(ggplot2)
 # Source a script from Kevin's githib repository
 source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/import_metadata.r")
 
-# Get the gene ids from Kevin's study that were found to be significantly deferentially expressed
+# Get the gene ids from Kevin's study that were found to be significantly differentially expressed
 # among the three considered studies
 # Use the list of genes from above
 my_genes <- as.character(all_three)
