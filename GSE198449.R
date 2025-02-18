@@ -19,6 +19,9 @@ library(tidyverse)
 library(gprofiler2)
 library(plotly)
 library(R.utils)
+library(preprocessCore) # To install this package, library(BiocManager), BiocManager::install("preprocessCore")
+library(matlab) # To install this package, library(BiocManager), BiocManager::install("matlab")
+library(ecodist) # To install this package, library(BiocManager), BiocManager::install("ecodist")
 
 # Source all additional functions from Kevin's github repository ----------------------------------------------
 
@@ -27,7 +30,7 @@ source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/imp
 source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/preprocessing_tool.r")
 source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/export_data.r")
 source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/calculate_pco.r")
-source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/render_calculated_pcoa.r")
+source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/refs/heads/master/render_calculated_pcoa.2-17-2025.r")
 source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/sigtest.R")
 source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/remove_last_n_columns.R")
 source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/heatmap_dendrogram.r")
@@ -35,6 +38,7 @@ source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/hea
 # Create a directory for working (if it doesn't already exist) and move to it --------
 # Specify the directory path
 dir_path <- "~/GSE198449/"
+
 # Check if the directory exists
 if (dir.exists(dir_path)) {
   stop("Error: The directory already exists.")
@@ -491,7 +495,7 @@ plot_interactive_colored_3d_pcoa(
 # Covid "Not" and "Detected" is strong and pretty clear  
 
 # Iterate through all of the metadata, creating a colored PCoA per column
-# Do this to see if there are any obvious correlations beween the data and
+# Do this to see if there are any obvious correlations between the data and
 # metadata
 plot_static_colored_3d_pcoas(
   pcoa_filename = "GSE198449.data.edit.txt.quantile.PREPROCESSED.txt.euclidean.PCoA",
@@ -556,8 +560,6 @@ dim(GSE198449_stat_results_subselected)[1]/dim(GSE198449_stat_results)[1]*100 # 
 export_data(data_object = GSE198449_stat_results_subselected, file_name = "GSE198449_stat_results_subselected.txt")
 # remove the columns that contain the stats(this is hacky)
 GSE198449_stat_results_subselected_and_cleaned <- remove_last_n_columns(GSE198449_stat_results_subselected, n=7)
-# make sure that samples are sorted/ordered as they are in the metadata above 
-length(GSE198449_ordered_sample_names) # 507
 
 # Export the data ready to create a new PCoA or HD
 export_data(data_object = GSE198449_stat_results_subselected_and_cleaned, file_name = "GSE198449_stat_results_subselected_and_cleaned.txt")

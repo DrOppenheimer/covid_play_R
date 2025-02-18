@@ -19,6 +19,9 @@ library(gprofiler2)
 library(plotly)
 library(RCurl)
 library(R.utils)
+library(preprocessCore) # To install this package, library(BiocManager), BiocManager::install("preprocessCore")
+library(matlab) # To install this package, library(BiocManager), BiocManager::install("matlab")
+library(ecodist) # To install this package, library(BiocManager), BiocManager::install("ecodist")
 
 # Source all additional functions from Kevin's github repository ----------------------------------------------
 
@@ -27,7 +30,7 @@ source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/imp
 source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/preprocessing_tool.r")
 source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/export_data.r")
 source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/calculate_pco.r")
-source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/render_calculated_pcoa.r")
+source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/refs/heads/master/render_calculated_pcoa.2-17-2025.r")
 source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/sigtest.R")
 source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/remove_last_n_columns.R")
 source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/heatmap_dendrogram.r")
