@@ -18,7 +18,7 @@ source("https://raw.githubusercontent.com/DrOppenheimer/workflow_play/master/hea
 
 # Create a directory for working (if it doesn't already exist) and move to it --------
 # Specify the directory path
-dir_path <- "/Users/[Your Username]/Documents/combine_covid/"
+dir_path <- "~/combine_covid/"
 # Check if the directory exists
 if (dir.exists(dir_path)) {
   stop("Error: The directory already exists.")
